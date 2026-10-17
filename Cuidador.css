@@ -1,0 +1,1344 @@
+/*==================================================
+                VARIABLES
+==================================================*/
+
+:root{
+
+    --azul:#1E63D6;
+    --azulOscuro:#154AA5;
+    --morado:#5B4BDB;
+    --moradoOscuro:#4839C7;
+
+    --verde:#34C759;
+    --rojo:#FF3B30;
+    --naranja:#FF9500;
+    --amarillo:#FFD60A;
+    --celeste:#32ADE6;
+
+    --gris:#F5F7FB;
+    --grisClaro:#F8F9FC;
+    --grisTexto:#666;
+    --blanco:#FFFFFF;
+
+    --sombra:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+            CONFIGURACIÓN GENERAL
+==================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+body{
+
+    background:var(--gris);
+
+    display:flex;
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+button,
+.card{
+
+    transition:.3s;
+
+}
+
+/*==================================================
+            CONTENEDOR
+==================================================*/
+
+.contenedor{
+
+    width:100%;
+    max-width:430px;
+
+    background:white;
+
+    min-height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding-bottom:90px;
+
+    box-shadow:var(--sombra);
+
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+header{
+
+    background:linear-gradient(
+        135deg,
+        var(--morado),
+        var(--moradoOscuro)
+    );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+.menu i{
+
+    font-size:24px;
+
+    cursor:pointer;
+
+}
+
+.titulo h2{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.notificaciones{
+
+    position:relative;
+
+}
+
+.notificaciones i{
+
+    font-size:23px;
+
+}
+
+.notificaciones span{
+
+    position:absolute;
+
+    top:-6px;
+    right:-8px;
+
+    width:18px;
+    height:18px;
+
+    background:red;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:11px;
+
+}
+
+/*==================================================
+                MENÚ LATERAL
+==================================================*/
+
+.menu-lateral{
+
+    position:fixed;
+
+    top:0;
+    left:-280px;
+
+    width:280px;
+    height:100%;
+
+    background:white;
+
+    z-index:1000;
+
+    transition:.35s;
+
+    overflow-y:auto;
+
+    box-shadow:5px 0 25px rgba(0,0,0,.20);
+
+}
+
+.menu-lateral.activo{
+
+    left:0;
+
+}
+
+.menu-header{
+
+    background:linear-gradient(
+        135deg,
+        var(--morado),
+        var(--moradoOscuro)
+    );
+
+    text-align:center;
+
+    color:white;
+
+    padding:35px 20px;
+
+}
+
+.menu-header img{
+
+    width:80px;
+
+    margin-bottom:10px;
+
+}
+
+.menu-header h2{
+
+    font-size:26px;
+
+}
+
+.menu-lateral ul{
+
+    list-style:none;
+
+}
+
+.menu-lateral li{
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.menu-lateral li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 24px;
+
+    font-weight:600;
+
+}
+
+.menu-lateral li a:hover{
+
+    background:#F3F2FF;
+
+    color:var(--morado);
+
+}
+
+.menu-lateral li a i{
+
+    color:var(--morado);
+
+    width:22px;
+
+}
+
+/*==================================================
+                OVERLAY
+==================================================*/
+
+#overlay{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.35);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:900;
+
+}
+
+#overlay.activo{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/*==================================================
+                SALUDO
+==================================================*/
+
+.saludo{
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 18px;
+
+}
+
+.texto-saludo h2{
+
+    font-size:28px;
+
+    color:#222;
+
+    margin-bottom:8px;
+
+}
+
+.texto-saludo p{
+
+    font-size:15px;
+
+    color:#666;
+
+}
+
+.avatar{
+
+    width:78px;
+
+    height:78px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.12);
+
+}
+
+.avatar img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+/*==================================================
+            ESPACIADO GENERAL
+==================================================*/
+
+section{
+
+    padding-left:18px;
+
+    padding-right:18px;
+
+}
+
+/*==================================================
+        PERSONAS A TU CUIDADO
+==================================================*/
+
+.personas{
+
+    margin-top:5px;
+    margin-bottom:25px;
+
+}
+
+.titulo-seccion{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.titulo-seccion h3{
+
+    font-size:22px;
+
+    color:#222;
+
+    font-weight:700;
+
+}
+
+.titulo-seccion a{
+
+    color:var(--morado);
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.titulo-seccion a:hover{
+
+    text-decoration:underline;
+
+}
+
+/*==================================================
+            TARJETA PERSONA
+==================================================*/
+
+.persona-card{
+
+    background:var(--blanco);
+
+    display:flex;
+
+    align-items:center;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    margin-bottom:18px;
+
+    box-shadow:var(--sombra);
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.persona-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+.foto{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+}
+
+.foto img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.datos{
+
+    flex:1;
+
+    margin-left:16px;
+
+}
+
+.datos h4{
+
+    font-size:18px;
+
+    color:#222;
+
+    margin-bottom:4px;
+
+}
+
+.datos span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+/*==================================================
+                ESTADOS
+==================================================*/
+
+.estado{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-right:15px;
+
+}
+
+.estado.verde{
+
+    background:#E8F8ED;
+
+    color:var(--verde);
+
+}
+
+.estado.naranja{
+
+    background:#FFF3E2;
+
+    color:var(--naranja);
+
+}
+
+.estado i{
+
+    font-size:15px;
+
+}
+
+/*==================================================
+                FLECHA
+==================================================*/
+
+.flecha{
+
+    color:#999;
+
+    font-size:20px;
+
+}
+
+/*==================================================
+        PRÓXIMOS RECORDATORIOS
+==================================================*/
+
+.recordatorios{
+
+    margin-bottom:30px;
+
+}
+
+.recordatorio-card{
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:18px;
+
+    border-radius:20px;
+
+    margin-bottom:18px;
+
+    box-shadow:var(--sombra);
+
+    transition:.30s;
+
+    cursor:pointer;
+
+}
+
+.recordatorio-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+.icono-recordatorio{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:24px;
+
+}
+
+.icono-recordatorio.morado{
+
+    background:var(--morado);
+
+}
+
+.icono-recordatorio.naranja{
+
+    background:var(--naranja);
+
+}
+
+.info-recordatorio{
+
+    flex:1;
+
+    margin-left:16px;
+
+}
+
+.info-recordatorio h4{
+
+    font-size:17px;
+
+    color:#222;
+
+    margin-bottom:5px;
+
+}
+
+.info-recordatorio span{
+
+    font-size:14px;
+
+    color:#777;
+
+}
+
+.tiempo{
+
+    padding:8px 12px;
+
+    border-radius:25px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    margin-right:15px;
+
+}
+
+.tiempo.azul{
+
+    background:#EAF3FF;
+
+    color:var(--azul);
+
+}
+
+.tiempo.naranja{
+
+    background:#FFF4E4;
+
+    color:var(--naranja);
+
+}
+
+/*==================================================
+            EFECTOS
+==================================================*/
+
+.persona-card:active{
+
+    transform:scale(.98);
+
+}
+
+.recordatorio-card:active{
+
+    transform:scale(.98);
+
+}
+
+.persona-card,
+.recordatorio-card{
+
+    animation:aparecer .45s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+            RESUMEN GENERAL
+==================================================*/
+
+.resumen{
+
+    margin-bottom:30px;
+
+}
+
+.resumen h3{
+
+    font-size:22px;
+
+    color:#222;
+
+    margin-bottom:18px;
+
+}
+
+.estadisticas{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+
+}
+
+.estadistica{
+
+    background:var(--blanco);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:var(--sombra);
+
+    transition:.30s;
+
+}
+
+.estadistica:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+.estadistica i{
+
+    font-size:30px;
+
+    margin-bottom:12px;
+
+}
+
+.estadistica:nth-child(1) i{
+
+    color:var(--verde);
+
+}
+
+.estadistica:nth-child(2) i{
+
+    color:var(--rojo);
+
+}
+
+.estadistica:nth-child(3) i{
+
+    color:var(--naranja);
+
+}
+
+.estadistica:nth-child(4) i{
+
+    color:var(--morado);
+
+}
+
+.estadistica h2{
+
+    font-size:28px;
+
+    color:#222;
+
+    margin-bottom:5px;
+
+}
+
+.estadistica span{
+
+    color:#777;
+
+    font-size:14px;
+
+}
+
+/*==================================================
+            TARJETA INFORMATIVA
+==================================================*/
+
+.info-cuidador{
+
+    margin-bottom:30px;
+
+}
+
+.mensaje{
+
+    background:linear-gradient(
+    135deg,
+    var(--morado),
+    var(--moradoOscuro));
+
+    border-radius:22px;
+
+    padding:22px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    color:white;
+
+    box-shadow:0 12px 25px rgba(91,75,219,.30);
+
+}
+
+.mensaje i{
+
+    font-size:38px;
+
+}
+
+.mensaje p{
+
+    font-size:15px;
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+            BARRA INFERIOR
+==================================================*/
+
+.bottom{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    max-width:430px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.08);
+
+    z-index:500;
+
+}
+
+.bottom a{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    color:#888;
+
+    font-size:12px;
+
+    transition:.30s;
+
+}
+
+.bottom a i{
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+}
+
+.bottom a:hover{
+
+    color:var(--morado);
+
+}
+
+.bottom a.activo{
+
+    color:var(--morado);
+
+    font-weight:600;
+
+}
+
+.bottom a:active{
+
+    transform:scale(.92);
+
+}
+
+/*==================================================
+            SCROLL
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#CCCCCC;
+
+    border-radius:20px;
+
+}
+
+/*==================================================
+            EFECTOS
+==================================================*/
+
+.menu i:hover{
+
+    transform:rotate(90deg);
+
+}
+
+.notificaciones:hover{
+
+    transform:scale(1.12);
+
+}
+
+.avatar:hover{
+
+    transform:scale(1.05);
+
+}
+
+.persona-card:hover .flecha{
+
+    transform:translateX(5px);
+
+}
+
+.recordatorio-card:hover .flecha{
+
+    transform:translateX(5px);
+
+}
+
+.flecha{
+
+    transition:.30s;
+
+}
+
+/*==================================================
+            RESPONSIVE - CELULARES
+==================================================*/
+
+@media (max-width:430px){
+
+    .contenedor{
+
+        width:100%;
+
+    }
+
+    header{
+
+        padding:15px;
+
+    }
+
+    .saludo{
+
+        padding:18px;
+
+    }
+
+    .texto-saludo h2{
+
+        font-size:24px;
+
+    }
+
+    .texto-saludo p{
+
+        font-size:14px;
+
+    }
+
+    .avatar{
+
+        width:65px;
+        height:65px;
+
+    }
+
+    .persona-card{
+
+        padding:15px;
+
+    }
+
+    .recordatorio-card{
+
+        padding:15px;
+
+    }
+
+    .foto{
+
+        width:55px;
+        height:55px;
+
+    }
+
+    .datos h4{
+
+        font-size:16px;
+
+    }
+
+    .datos span{
+
+        font-size:13px;
+
+    }
+
+    .estado{
+
+        font-size:11px;
+
+        padding:6px 10px;
+
+    }
+
+    .info-recordatorio h4{
+
+        font-size:15px;
+
+    }
+
+    .info-recordatorio span{
+
+        font-size:13px;
+
+    }
+
+    .estadisticas{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+}
+
+/*==================================================
+            TABLETS
+==================================================*/
+
+@media (min-width:431px) and (max-width:900px){
+
+    .contenedor{
+
+        margin:auto;
+
+    }
+
+}
+
+/*==================================================
+            COMPUTADORES
+==================================================*/
+
+@media(min-width:900px){
+
+    body{
+
+        background:#E8EEF8;
+
+    }
+
+    .contenedor{
+
+        margin:30px auto;
+
+        border-radius:30px;
+
+        overflow:hidden;
+
+    }
+
+    .bottom{
+
+        border-bottom-left-radius:30px;
+
+        border-bottom-right-radius:30px;
+
+    }
+
+}
+
+/*==================================================
+            TRANSICIONES
+==================================================*/
+
+*{
+
+    scroll-behavior:smooth;
+
+}
+
+.persona-card,
+.recordatorio-card,
+.estadistica,
+.bottom a,
+.menu-lateral a,
+button{
+
+    transition:.30s;
+
+}
+
+/*==================================================
+            ELEMENTOS ACTIVOS
+==================================================*/
+
+.menu-lateral a.activo{
+
+    background:#F2F0FF;
+
+    color:var(--morado);
+
+}
+
+.menu-lateral a.activo i{
+
+    color:var(--morado);
+
+}
+
+.bottom a.activo{
+
+    color:var(--morado);
+
+}
+
+/*==================================================
+            BOTÓN FLOTANTE
+        (Para futuras versiones)
+==================================================*/
+
+.fab{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:90px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--morado),
+        var(--moradoOscuro)
+    );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:26px;
+
+    box-shadow:0 10px 20px rgba(91,75,219,.35);
+
+    cursor:pointer;
+
+    transition:.30s;
+
+    z-index:300;
+
+}
+
+.fab:hover{
+
+    transform:scale(1.08);
+
+}
+
+.fab:active{
+
+    transform:scale(.95);
+
+}
+
+/*==================================================
+            ANIMACIONES
+==================================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.saludo,
+.persona-card,
+.recordatorio-card,
+.estadistica,
+.info-cuidador{
+
+    animation:aparecer .5s ease;
+
+}
+
+/*==================================================
+            SCROLL
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#CFCFCF;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F5F5F5;
+
+}
+
+/*==================================================
+            SELECCIÓN DE TEXTO
+==================================================*/
+
+::selection{
+
+    background:var(--morado);
+
+    color:white;
+
+}
+
+/*==================================================
+            FIN DEL CSS
+==================================================*/

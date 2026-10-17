@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Registro - MiDosis</title>
+
+<link rel="stylesheet" href="registro.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<div class="titulo">
+
+<a href="index.html">
+<i class="fa-solid fa-arrow-left"></i>
+</a>
+
+<h2>Crear cuenta</h2>
+
+</div>
+
+<form id="registroForm">
+
+<label>Nombre completo</label>
+
+<div class="input-box">
+
+<i class="fa-regular fa-user"></i>
+
+<input
+type="text"
+id="nombre"
+placeholder="Ingresa tu nombre completo"
+required>
+
+</div>
+
+<label>Correo electrónico</label>
+
+<div class="input-box">
+
+<i class="fa-regular fa-envelope"></i>
+
+<input
+type="email"
+id="correo"
+placeholder="ejemplo@email.com"
+required>
+
+</div>
+
+<label>Contraseña</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="password"
+placeholder="Crea una contraseña"
+required>
+
+<i class="fa-regular fa-eye ojo"
+onclick="mostrarPassword('password',this)">
+</i>
+
+</div>
+
+<label>Confirmar contraseña</label>
+
+<div class="input-box">
+
+<i class="fa-solid fa-lock"></i>
+
+<input
+type="password"
+id="confirmar"
+placeholder="Confirma tu contraseña"
+required>
+
+<i class="fa-regular fa-eye ojo"
+onclick="mostrarPassword('confirmar',this)">
+</i>
+
+</div>
+
+<div class="terminos">
+
+<input
+type="checkbox"
+id="check"
+required>
+
+<label for="check">
+Acepto los
+<a href="#">términos y condiciones</a>
+</label>
+
+</div>
+
+<button type="submit" class="btn-registro">
+
+Registrarse
+
+</button>
+
+<p class="login">
+
+¿Ya tienes cuenta?
+
+<a href="index.html">
+
+Inicia sesión
+
+</a>
+
+</p>
+
+</form>
+
+</div>
+
+<script src="Registro.js"></script>
+
+</body>
+
+</html>

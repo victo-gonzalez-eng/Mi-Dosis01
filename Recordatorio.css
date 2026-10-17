@@ -1,0 +1,503 @@
+/*==============================
+    RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#f3f5f9;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:20px;
+
+}
+
+
+/*==============================
+    CONTENEDOR
+==============================*/
+
+.contenedor{
+
+    width:100%;
+
+    max-width:420px;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+
+}
+
+
+/*==============================
+    ENCABEZADO
+==============================*/
+
+.encabezado{
+
+    height:72px;
+
+    background:#1565d8;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    color:white;
+
+}
+
+.encabezado h2{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.btn-regresar{
+
+    position:absolute;
+
+    left:18px;
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.btn-regresar:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+/*==============================
+    TARJETA
+==============================*/
+
+.tarjeta-recordatorio{
+
+    padding:35px 25px 40px;
+
+    text-align:center;
+
+}
+
+
+/*==============================
+    ICONO
+==============================*/
+
+.icono-superior{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#e8f0ff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.icono-superior i{
+
+    font-size:42px;
+
+    color:#1565d8;
+
+}
+
+
+/*==============================
+    TITULO
+==============================*/
+
+.tarjeta-recordatorio h1{
+
+    font-size:28px;
+
+    color:#1565d8;
+
+    margin-bottom:30px;
+
+}
+
+
+/*==============================
+    INFORMACIÓN
+==============================*/
+
+.informacion h2{
+
+    color:#1fa638;
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+.informacion p{
+
+    color:#444;
+
+    font-size:20px;
+
+    margin-bottom:35px;
+
+}
+
+
+/*==============================
+    HORA
+==============================*/
+
+.hora-programada{
+
+    margin-bottom:35px;
+
+}
+
+.hora-programada span{
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+.hora{
+
+    margin-top:12px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:1px solid #dcdcdc;
+
+    border-radius:12px;
+
+    padding:14px 22px;
+
+    font-size:22px;
+
+    background:#fafafa;
+
+}
+
+.hora i{
+
+    color:#1565d8;
+
+}
+
+
+/*==============================
+    BOTONES
+==============================*/
+
+.acciones{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+/*==============================
+    TOMADO
+==============================*/
+
+.btn-tomado{
+
+    height:56px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#2eb54b;
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-tomado:hover{
+
+    background:#25983f;
+
+    transform:translateY(-2px);
+
+}
+
+
+/*==============================
+    POSPONER
+==============================*/
+
+.btn-posponer{
+
+    height:56px;
+
+    border-radius:30px;
+
+    border:2px solid #d3d9e6;
+
+    background:white;
+
+    color:#333;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-posponer:hover{
+
+    background:#eef4ff;
+
+}
+
+
+/*==============================
+    NO MOSTRAR
+==============================*/
+
+.btn-ocultar{
+
+    margin-top:35px;
+
+    background:none;
+
+    border:none;
+
+    color:#777;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+}
+
+.btn-ocultar:hover{
+
+    color:#1565d8;
+
+}
+
+
+/*==============================
+    MODAL
+==============================*/
+
+.modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999;
+
+}
+
+.modal-contenido{
+
+    width:90%;
+
+    max-width:340px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.modal-contenido h3{
+
+    color:#1565d8;
+
+    margin-bottom:15px;
+
+}
+
+.modal-contenido p{
+
+    color:#555;
+
+    margin-bottom:20px;
+
+    line-height:1.6;
+
+}
+
+.modal-contenido button{
+
+    width:100%;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#1565d8;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+}
+
+
+/*==============================
+    RESPONSIVE
+==============================*/
+
+@media(max-width:480px){
+
+    body{
+
+        padding:10px;
+
+    }
+
+    .contenedor{
+
+        max-width:100%;
+
+    }
+
+    .tarjeta-recordatorio{
+
+        padding:25px 20px 35px;
+
+    }
+
+    .tarjeta-recordatorio h1{
+
+        font-size:24px;
+
+    }
+
+    .informacion h2{
+
+        font-size:24px;
+
+    }
+
+    .hora{
+
+        font-size:18px;
+
+    }
+
+    .btn-tomado,
+    .btn-posponer{
+
+        font-size:18px;
+
+    }
+
+}
+
+
+/*==============================
+    ANIMACIÓN
+==============================*/
+
+.tarjeta-recordatorio{
+
+    animation:mostrar .4s ease;
+
+}
+
+@keyframes mostrar{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

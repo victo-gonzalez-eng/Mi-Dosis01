@@ -1,0 +1,404 @@
+/*==============================
+    RESET
+==============================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    background:#f3f5f9;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
+    padding:25px;
+
+}
+
+
+/*==============================
+    CONTENEDOR
+==============================*/
+
+.contenedor{
+
+    width:100%;
+
+    max-width:420px;
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+
+}
+
+
+/*==============================
+    ENCABEZADO
+==============================*/
+
+.encabezado{
+
+    background:#1565d8;
+
+    color:#fff;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    position:relative;
+
+}
+
+.encabezado h2{
+
+    font-size:24px;
+
+    font-weight:600;
+
+}
+
+.btn-regresar{
+
+    position:absolute;
+
+    left:18px;
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-regresar:hover{
+
+    transform:translateX(-4px);
+
+}
+
+
+/*==============================
+    FORMULARIO
+==============================*/
+
+form{
+
+    padding:28px;
+
+}
+
+
+/*==============================
+    GRUPOS
+==============================*/
+
+.grupo{
+
+    margin-bottom:22px;
+
+}
+
+.grupo label{
+
+    display:block;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    color:#333;
+
+    margin-bottom:10px;
+
+}
+
+
+/*==============================
+    CAMPOS
+==============================*/
+
+.campo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.campo i{
+
+    color:#1d5fff;
+
+    font-size:20px;
+
+    width:24px;
+
+    text-align:center;
+
+}
+
+.campo input,
+.campo select{
+
+    flex:1;
+
+    height:48px;
+
+    border:1px solid #d6dbe4;
+
+    border-radius:10px;
+
+    padding:0 14px;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:white;
+
+    transition:.25s;
+
+}
+
+.campo input:focus,
+.campo select:focus{
+
+    border-color:#1565d8;
+
+    box-shadow:0 0 0 4px rgba(21,101,216,.15);
+
+}
+
+
+/*==============================
+    SELECT
+==============================*/
+
+select{
+
+    cursor:pointer;
+
+}
+
+
+/*==============================
+    INPUT DATE
+==============================*/
+
+input[type="date"]{
+
+    cursor:pointer;
+
+}
+
+
+/*==============================
+    INPUT TIME
+==============================*/
+
+input[type="time"]{
+
+    cursor:pointer;
+
+}
+
+
+/*==============================
+    MENSAJES
+==============================*/
+
+#mensaje{
+
+    display:none;
+
+    margin-top:5px;
+
+    margin-bottom:20px;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    text-align:center;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+.correcto{
+
+    background:#d4edda;
+
+    color:#155724;
+
+    display:block !important;
+
+}
+
+.error{
+
+    background:#f8d7da;
+
+    color:#721c24;
+
+    display:block !important;
+
+}
+
+
+/*==============================
+    BOTÓN
+==============================*/
+
+.btn-guardar{
+
+    width:100%;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#2eb54b;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.btn-guardar:hover{
+
+    background:#279b3f;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+}
+
+.btn-guardar:active{
+
+    transform:scale(.98);
+
+}
+
+
+/*==============================
+    PLACEHOLDER
+==============================*/
+
+::placeholder{
+
+    color:#9aa3b2;
+
+}
+
+
+/*==============================
+    RESPONSIVE
+==============================*/
+
+@media(max-width:480px){
+
+    body{
+
+        padding:10px;
+
+    }
+
+    .contenedor{
+
+        max-width:100%;
+
+    }
+
+    form{
+
+        padding:20px;
+
+    }
+
+    .encabezado h2{
+
+        font-size:20px;
+
+    }
+
+    .campo input,
+    .campo select{
+
+        font-size:14px;
+
+    }
+
+}
+
+
+/*==============================
+    EFECTOS
+==============================*/
+
+.grupo{
+
+    animation:aparecer .35s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

@@ -1,0 +1,899 @@
+/*==================================================
+                VARIABLES
+==================================================*/
+
+:root{
+
+    --azul:#1E63D6;
+    --azulOscuro:#154AA5;
+    --azulClaro:#EAF3FF;
+
+    --verde:#25D366;
+    --gris:#F5F7FB;
+    --grisTexto:#666666;
+    --blanco:#FFFFFF;
+
+    --borde:#E5E7EB;
+
+    --telefono:#1E63D6;
+    --correo:#FF9800;
+    --reloj:#8E44AD;
+    --ubicacion:#E53935;
+
+    --sombra:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+                GENERAL
+==================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+body{
+
+    background:var(--gris);
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+/*==================================================
+            CONTENEDOR
+==================================================*/
+
+.contenedor{
+
+    width:100%;
+    max-width:430px;
+
+    background:white;
+
+    min-height:100vh;
+
+    padding-bottom:95px;
+
+    box-shadow:var(--sombra);
+
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+header{
+
+    background:linear-gradient(
+    135deg,
+    var(--azul),
+    var(--azulOscuro)
+    );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+header h2{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.btn-volver{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.btn-volver:hover{
+
+    transform:scale(1.08);
+
+}
+
+.espacio{
+
+    width:25px;
+
+}
+
+/*==================================================
+                CABECERA
+==================================================*/
+
+.cabecera{
+
+    text-align:center;
+
+    padding:30px 20px;
+
+}
+
+.cabecera img{
+
+    width:135px;
+
+    margin-bottom:20px;
+
+}
+
+.cabecera h1{
+
+    font-size:28px;
+
+    color:#333;
+
+    margin-bottom:12px;
+
+}
+
+.cabecera p{
+
+    color:var(--grisTexto);
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+            INFORMACIÓN
+==================================================*/
+
+.informacion{
+
+    padding:0 20px;
+
+}
+
+.info{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:18px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.icono{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:24px;
+
+}
+
+.telefono{
+
+    background:var(--telefono);
+
+}
+
+.reloj{
+
+    background:var(--reloj);
+
+}
+
+.correo{
+
+    background:var(--correo);
+
+}
+
+.ubicacion{
+
+    background:var(--ubicacion);
+
+}
+
+.info h3{
+
+    color:#333;
+
+    margin-bottom:6px;
+
+    font-size:17px;
+
+}
+
+.info p{
+
+    color:var(--grisTexto);
+
+    font-size:15px;
+
+    line-height:1.5;
+
+}
+
+/*==================================================
+            BOTONES
+==================================================*/
+
+.acciones{
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.acciones a{
+
+    text-decoration:none;
+
+    text-align:center;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+.acciones i{
+
+    margin-right:10px;
+
+}
+
+.btnLlamar{
+
+    background:var(--azul);
+
+    color:white;
+
+}
+
+.btnWhatsapp{
+
+    background:var(--verde);
+
+    color:white;
+
+}
+
+.btnCorreo{
+
+    background:white;
+
+    color:var(--azul);
+
+    border:2px solid var(--azul);
+
+}
+
+.btnVolver{
+
+    background:#ECECEC;
+
+    color:#333;
+
+}
+
+/*==================================================
+            RECOMENDACIONES
+==================================================*/
+
+.recomendaciones{
+
+    margin:0 20px 25px;
+
+    background:var(--azulClaro);
+
+    padding:22px;
+
+    border-radius:20px;
+
+}
+
+.recomendaciones h3{
+
+    color:#333;
+
+    margin-bottom:15px;
+
+}
+
+.recomendaciones h3 i{
+
+    color:var(--azul);
+
+    margin-right:8px;
+
+}
+
+.recomendaciones ul{
+
+    padding-left:20px;
+
+}
+
+.recomendaciones li{
+
+    color:#555;
+
+    margin-bottom:12px;
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+            TRANSICIONES
+==================================================*/
+
+button,
+a,
+.info,
+.icono{
+
+transition:.30s;
+
+}
+
+/*==================================================
+            BARRA DE NAVEGACIÓN
+==================================================*/
+
+.bottom{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    max-width:430px;
+
+    height:75px;
+
+    background:var(--blanco);
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.08);
+
+    z-index:1000;
+
+}
+
+.bottom a{
+
+    width:25%;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#808080;
+
+    font-size:12px;
+
+    transition:.30s;
+
+}
+
+.bottom a i{
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+}
+
+.bottom a:hover{
+
+    color:var(--azul);
+
+}
+
+.bottom a:hover i{
+
+    transform:translateY(-3px);
+
+}
+
+.bottom a.activo{
+
+    color:var(--azul);
+
+    font-weight:bold;
+
+}
+
+/*==================================================
+            EFECTOS BOTONES
+==================================================*/
+
+.btnLlamar:hover{
+
+    background:var(--azulOscuro);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(30,99,214,.30);
+
+}
+
+.btnWhatsapp:hover{
+
+    background:#20B858;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(37,211,102,.30);
+
+}
+
+.btnCorreo:hover{
+
+    background:var(--azul);
+
+    color:white;
+
+    transform:translateY(-3px);
+
+}
+
+.btnVolver:hover{
+
+    background:#D9D9D9;
+
+    transform:translateY(-3px);
+
+}
+
+/*==================================================
+            TARJETAS
+==================================================*/
+
+.info{
+
+    transition:.35s;
+
+}
+
+.info:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.10);
+
+}
+
+.info:hover .icono{
+
+    transform:scale(1.10);
+
+}
+
+/*==================================================
+            RECOMENDACIONES
+==================================================*/
+
+.recomendaciones{
+
+    transition:.35s;
+
+}
+
+.recomendaciones:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+            ANIMACIONES
+==================================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+header{
+
+    animation:aparecer .4s ease;
+
+}
+
+.cabecera{
+
+    animation:aparecer .6s ease;
+
+}
+
+.info:nth-child(1){
+
+    animation:aparecer .8s ease;
+
+}
+
+.info:nth-child(2){
+
+    animation:aparecer 1s ease;
+
+}
+
+.info:nth-child(3){
+
+    animation:aparecer 1.2s ease;
+
+}
+
+.info:nth-child(4){
+
+    animation:aparecer 1.4s ease;
+
+}
+
+.acciones{
+
+    animation:aparecer 1.6s ease;
+
+}
+
+.recomendaciones{
+
+    animation:aparecer 1.8s ease;
+
+}
+
+/*==================================================
+            SCROLL
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#CFCFCF;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F2F2F2;
+
+}
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media(max-width:430px){
+
+header{
+
+    padding:16px;
+
+}
+
+.cabecera{
+
+    padding:25px 18px;
+
+}
+
+.cabecera img{
+
+    width:120px;
+
+}
+
+.cabecera h1{
+
+    font-size:24px;
+
+}
+
+.cabecera p{
+
+    font-size:15px;
+
+}
+
+.informacion{
+
+    padding:0 15px;
+
+}
+
+.info{
+
+    padding:16px;
+
+}
+
+.icono{
+
+    width:52px;
+
+    height:52px;
+
+    font-size:20px;
+
+}
+
+.info h3{
+
+    font-size:16px;
+
+}
+
+.info p{
+
+    font-size:14px;
+
+}
+
+.acciones{
+
+    padding:15px;
+
+}
+
+.acciones a{
+
+    padding:14px;
+
+    font-size:15px;
+
+}
+
+.recomendaciones{
+
+    margin:0 15px 20px;
+
+    padding:20px;
+
+}
+
+.bottom{
+
+    height:72px;
+
+}
+
+}
+
+/*==================================================
+            COMPUTADORES
+==================================================*/
+
+@media(min-width:900px){
+
+body{
+
+    background:#EAF0F8;
+
+}
+
+.contenedor{
+
+    margin:30px auto;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+}
+
+.bottom{
+
+    border-bottom-left-radius:28px;
+
+    border-bottom-right-radius:28px;
+
+}
+
+}
+
+/*==================================================
+            EFECTOS GENERALES
+==================================================*/
+
+button,
+a,
+.info,
+.icono{
+
+    transition:.30s;
+
+}
+
+button:active,
+a:active{
+
+    transform:scale(.97);
+
+}
+
+/*==================================================
+            SOMBRAS
+==================================================*/
+
+.info{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.recomendaciones{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+            INDICADOR DE DISPONIBILIDAD
+==================================================*/
+
+.estado{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:15px;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    color:#2E7D32;
+
+}
+
+.estado::before{
+
+    content:"";
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#2ECC71;
+
+    animation:pulso 1.5s infinite;
+
+}
+
+@keyframes pulso{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:scale(1.6);
+
+        opacity:.4;
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/*==================================================
+            FIN DEL CSS
+==================================================*/

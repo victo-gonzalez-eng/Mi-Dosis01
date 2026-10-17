@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Configuración | MiDosis</title>
+
+<link rel="stylesheet"
+href="configuracion.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<!--============================-->
+<!-- ENCABEZADO -->
+<!--============================-->
+
+<header>
+
+<a href="perfil.html" class="volver">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<h2>
+
+Configuración
+
+</h2>
+
+</header>
+
+<!--============================-->
+<!-- LOGO -->
+<!--============================-->
+
+<section class="logo">
+
+<img src="log 1.png" alt="MiDosis">
+
+<h3>
+
+Preferencias de la aplicación
+
+</h3>
+
+<p>
+
+Personaliza MiDosis según tus necesidades.
+
+</p>
+
+</section>
+
+<!--============================-->
+<!-- CUENTA -->
+<!--============================-->
+
+<section class="tarjeta">
+
+<h4>
+
+Cuenta
+
+</h4>
+
+<a href="editar_perfil.html" class="item">
+
+<div>
+
+<i class="fa-solid fa-user-pen"></i>
+
+<span>
+
+Editar información
+
+</span>
+
+</div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="cambiar_password.html" class="item">
+
+<div>
+
+<i class="fa-solid fa-lock"></i>
+
+<span>
+
+Cambiar contraseña
+
+</span>
+
+</div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+</section>
+
+<!--============================-->
+<!-- NOTIFICACIONES -->
+<!--============================-->
+
+<section class="tarjeta">
+
+<h4>
+
+Notificaciones
+
+</h4>
+
+<div class="switch">
+
+<span>
+
+Recordatorios de medicamentos
+
+</span>
+
+<label class="interruptor">
+
+<input
+type="checkbox"
+id="recordatorios"
+checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="switch">
+
+<span>
+
+Sonido de notificaciones
+
+</span>
+
+<label class="interruptor">
+
+<input
+type="checkbox"
+id="sonido"
+checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<div class="switch">
+
+<span>
+
+Vibración
+
+</span>
+
+<label class="interruptor">
+
+<input
+type="checkbox"
+id="vibracion"
+checked>
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+</section>
+
+<!--============================-->
+<!-- APARIENCIA -->
+<!--============================-->
+
+<section class="tarjeta">
+
+<h4>
+
+Apariencia
+
+</h4>
+
+<div class="switch">
+
+<span>
+
+Modo oscuro
+
+</span>
+
+<label class="interruptor">
+
+<input
+type="checkbox"
+id="modoOscuro">
+
+<span class="slider"></span>
+
+</label>
+
+</div>
+
+<label>
+
+Tamaño del texto
+
+</label>
+
+<select id="tamanoTexto">
+
+<option value="16">
+
+Normal
+
+</option>
+
+<option value="18">
+
+Grande
+
+</option>
+
+<option value="20">
+
+Muy grande
+
+</option>
+
+</select>
+
+</section>
+
+<!--============================-->
+<!-- IDIOMA -->
+<!--============================-->
+
+<section class="tarjeta">
+
+<h4>
+
+Idioma
+
+</h4>
+
+<select id="idioma">
+
+<option>
+
+Español
+
+</option>
+
+<option>
+
+English
+
+</option>
+
+</select>
+
+</section>
+
+<!--============================-->
+<!-- INFORMACIÓN -->
+<!--============================-->
+
+<section class="tarjeta">
+
+<h4>
+
+Información
+
+</h4>
+
+<a href="#" class="item">
+
+<div>
+
+<i class="fa-solid fa-circle-info"></i>
+
+<span>
+
+Acerca de MiDosis
+
+</span>
+
+</div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="#" class="item">
+
+<div>
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<span>
+
+Política de privacidad
+
+</span>
+
+</div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<a href="#" class="item">
+
+<div>
+
+<i class="fa-solid fa-file-contract"></i>
+
+<span>
+
+Términos y condiciones
+
+</span>
+
+</div>
+
+<i class="fa-solid fa-chevron-right"></i>
+
+</a>
+
+<div class="version">
+
+Versión 1.0.0
+
+</div>
+
+</section>
+
+<!--============================-->
+<!-- BOTONES -->
+<!--============================-->
+
+<div class="botones">
+
+<button
+class="guardar"
+id="guardar">
+
+Guardar configuración
+
+</button>
+
+<button
+class="cerrar"
+id="cerrarSesion">
+
+Cerrar sesión
+
+</button>
+
+</div>
+
+</div>
+
+<script src="configuracion.js"></script>
+
+</body>
+
+</html>

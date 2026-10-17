@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Mis medicamentos</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Mis Medicamentos.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!--=========================
+                ENCABEZADO
+        ==========================-->
+
+        <header class="encabezado">
+
+            <button id="btnVolver"
+                    class="btn-regresar">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </button>
+
+            <h2>Mis medicamentos</h2>
+
+            <button id="btnFiltro"
+                    class="btn-filtro">
+
+                <i class="fa-solid fa-filter"></i>
+
+            </button>
+
+        </header>
+
+
+        <!--=========================
+            LISTA DE MEDICAMENTOS
+        ==========================-->
+
+        <main id="listaMedicamentos">
+
+            <!--
+                Las tarjetas serán creadas
+                automáticamente con JavaScript.
+            -->
+
+        </main>
+
+
+        <!--=========================
+            MENSAJE VACÍO
+        ==========================-->
+
+        <div id="sinMedicamentos"
+             class="sin-medicamentos">
+
+            <i class="fa-solid fa-capsules"></i>
+
+            <h3>No hay medicamentos registrados</h3>
+
+            <p>
+
+                Presiona el botón de abajo para
+                agregar tu primer medicamento.
+
+            </p>
+
+        </div>
+
+
+        <!--=========================
+            BOTÓN AGREGAR
+        ==========================-->
+
+       <div class="contenedor-boton">
+    <a href="Registro Medicamento.html">
+        <button id="btnAgregar" class="btn-agregar">
+            <i class="fa-solid fa-plus"></i>
+            Agregar medicamento
+        </button>
+    </a>
+</div>
+
+
+        <!--=========================
+            MENÚ INFERIOR
+        ==========================-->
+
+        <nav class="menu-inferior">
+
+            <a href="index.html"
+               class="item-menu">
+
+                <i class="fa-solid fa-house"></i>
+
+                <span>Inicio</span>
+
+            </a>
+
+            <a href="mis-medicamentos.html"
+               class="item-menu activo">
+
+                <i class="fa-solid fa-pills"></i>
+
+                <span>Medicamentos</span>
+
+            </a>
+
+            <a href="historial.html"
+               class="item-menu">
+
+                <i class="fa-regular fa-calendar-check"></i>
+
+                <span>Historial</span>
+
+            </a>
+
+            <a href="perfil.html"
+               class="item-menu">
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>Perfil</span>
+
+            </a>
+
+        </nav>
+
+    </div>
+
+
+
+    <!--=========================
+        MENÚ DE OPCIONES
+    ==========================-->
+
+    <div id="menuOpciones"
+         class="menu-opciones">
+
+        <button id="editarMedicamento">
+
+            <i class="fa-solid fa-pen"></i>
+
+            Editar
+
+        </button>
+
+        <button id="eliminarMedicamento">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Eliminar
+
+        </button>
+
+        <button id="verInformacion">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            Ver información
+
+        </button>
+
+    </div>
+
+
+
+    <!--=========================
+        JAVASCRIPT
+    ==========================-->
+
+    <script src="Mis Medicamentos.js"></script>
+
+</body>
+
+</html>

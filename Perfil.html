@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi Perfil | MiDosis</title>
+
+<link rel="stylesheet" href="Perfil.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <!--================ HEADER =================-->
+
+    <header>
+
+        <button class="btn-volver" id="volver">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>Mi perfil</h2>
+
+        <div class="espacio"></div>
+
+    </header>
+
+    <!--================ PERFIL =================-->
+
+    <section class="perfil">
+
+        <div class="foto">
+
+            <img
+            src="Usuario1.avif"
+            id="fotoPerfil"
+            alt="Usuario">
+
+            <label
+            for="cambiarFoto"
+            class="camara">
+
+                <i class="fa-solid fa-camera"></i>
+
+            </label>
+
+            <input
+            type="file"
+            id="cambiarFoto"
+            accept="image/*"
+            hidden>
+
+        </div>
+
+        <h2 id="nombreUsuario">
+
+            Víctor Alfonso González Palacio
+
+        </h2>
+
+        <p id="correoUsuario">
+
+            victor.gonzalez@email.com
+
+        </p>
+
+    </section>
+
+    <!--================ OPCIONES =================-->
+
+    <section class="opciones">
+
+        <a href="Editar-info.html" class="item">
+
+            <div>
+
+                <i class="fa-regular fa-pen-to-square"></i>
+
+                <span>Editar información</span>
+
+            </div>
+
+            <i class="fa-solid fa-angle-right"></i>
+
+        </a>
+
+        <a href="cambiar_password.html" class="item">
+
+            <div>
+
+                <i class="fa-solid fa-lock"></i>
+
+                <span>Cambiar contraseña</span>
+
+            </div>
+
+            <i class="fa-solid fa-angle-right"></i>
+
+        </a>
+
+        <a href="configuracion.html" class="item">
+
+            <div>
+
+                <i class="fa-solid fa-gear"></i>
+
+                <span>Configuración</span>
+
+            </div>
+
+            <i class="fa-solid fa-angle-right"></i>
+
+        </a>
+
+        <a href="#" class="item salir" id="cerrarSesion">
+
+            <div>
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Cerrar sesión</span>
+
+            </div>
+
+        </a>
+
+    </section>
+
+</div>
+
+<!--================ BARRA INFERIOR =================-->
+
+<nav class="bottom">
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Inicio</span>
+
+</a>
+
+<a href="medicamentos.html">
+
+<i class="fa-solid fa-capsules"></i>
+
+<span>Medicamentos</span>
+
+</a>
+
+<a href="historial.html">
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+<span>Historial</span>
+
+</a>
+
+<a href="perfil.html" class="activo">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Perfil</span>
+
+</a>
+
+</nav>
+
+<script src="Perfil.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiDosis - Inicio de Sesión</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#4A90E2">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="log 1.png" alt="MiDosis">
+      
+       <h3>Tu salud, en orden</h3>
+    </div>
+
+    <!-- Formulario -->
+    <form>
+
+        <label>Correo electrónico</label>
+
+        <div class="input-box">
+            <i class="fa-regular fa-envelope"></i>
+            <input type="email"
+            placeholder="ejemplo@email.com"
+            required>
+        </div>
+
+        <label>Contraseña</label>
+
+        <div class="input-box">
+            <i class="fa-solid fa-lock"></i>
+
+            <input type="password"
+            id="password"
+            placeholder="Ingresa tu contraseña"
+            required>
+
+            <i class="fa-regular fa-eye ojo"
+            onclick="mostrarPassword()"></i>
+        </div>
+
+        <!-- Recuperar contraseña -->
+        <a href="Recuperar.html"
+        class="olvido">
+        ¿Olvidaste tu contraseña?
+        </a>
+
+        <!-- Botón login -->
+        <button type="submit"
+        class="btn-login">
+        <a href="Dashboard.html"></a>
+        Iniciar sesión
+        </button>
+
+        <!-- Gmail -->
+       <button type="button"
+class="btn-gmail"
+onclick="window.open('https://mail.google.com','_blank')">
+    <i class="fa-brands fa-google"></i>
+    Continuar con Gmail
+</button>
+
+        <div class="separador">
+            <span>¿No tienes cuenta?</span>
+        </div>
+
+        <!-- Registro -->
+        <a href="Registro.html"
+        class="btn-registro">
+        Registrarse
+        </a>
+
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+if("serviceWorker" in navigator){
+
+navigator.serviceWorker
+
+.register("service-worker.js")
+
+.then(()=>{
+
+console.log("Service Worker instalado");
+
+})
+
+.catch((error)=>{
+
+console.log(error);
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

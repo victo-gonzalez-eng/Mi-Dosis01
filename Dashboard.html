@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi Dosis | Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--================ MENU LATERAL =================-->
+
+<div id="menuLateral" class="menu-lateral">
+
+    <div class="menu-header">
+
+        <img src="log 1.png" alt="Mi Dosis">
+
+        <h2>Mi Dosis</h2>
+
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="dashboard.html">
+                <i class="fa-solid fa-house"></i>
+                Inicio
+            </a>
+        </li>
+
+        <li>
+            <a href="Mis Medicamentos.html">
+                <i class="fa-solid fa-capsules"></i>
+                Medicamentos
+            </a>
+        </li>
+
+        <li>
+            <a href="Recordatorio.html">
+                <i class="fa-solid fa-bell"></i>
+                Recordatorios
+            </a>
+        </li>
+
+        <li>
+            <a href="Historial.html">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Historial
+            </a>
+        </li>
+
+        <li>
+            <a href="Cuidador.html">
+                <i class="fa-solid fa-user-group"></i>
+                Cuidador
+            </a>
+        </li>
+
+        <li>
+            <a href="Perfil.html">
+                <i class="fa-solid fa-user"></i>
+                Perfil
+            </a>
+        </li>
+
+        <li>
+            <a href="configuracion.html">
+                <i class="fa-solid fa-gear"></i>
+                Configuración
+            </a>
+        </li>
+
+        <li>
+            <a href="index.html">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Cerrar sesión
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+<!--================ SOMBRA MENU =================-->
+
+<div id="overlay"></div>
+
+<!--================ CONTENEDOR =================-->
+
+<div class="contenedor">
+
+<!--================ HEADER =================-->
+
+<header>
+
+<div class="menu">
+
+<i
+class="fa-solid fa-bars"
+id="abrirMenu">
+</i>
+
+</div>
+
+<div class="titulo">
+
+
+<h2>Mi Dosis</h2>
+
+</div>
+
+<div class="notificaciones">
+
+<i class="fa-regular fa-bell"></i>
+
+<span>3</span>
+
+</div>
+
+</header>
+
+<!--================ SALUDO =================-->
+
+<section class="saludo">
+
+<div>
+
+<h3>
+
+¡Hola, Víctor!
+
+</h3>
+
+<p>
+
+¿Qué deseas hacer hoy?
+
+</p>
+
+</div>
+
+<a href="Perfil.html">
+
+<img
+src="Usuario1.avif"
+alt="usuario"
+class="fotoPerfil">
+
+</a>
+
+</section>
+
+<!--================ TARJETAS =================-->
+
+<section class="acciones">
+
+<!-- Agregar medicamento -->
+
+<a
+href="Registro Medicamento.html"
+class="card">
+
+<div class="icono verde">
+
+<i class="fa-solid fa-circle-plus"></i>
+
+</div>
+
+<div class="texto">
+
+<h3>
+
+Agregar medicamento
+
+</h3>
+
+<p>
+
+Registra un nuevo medicamento
+
+</p>
+
+</div>
+
+<i class="fa-solid fa-angle-right flecha"></i>
+
+</a>
+
+<!-- Mis medicamentos -->
+
+<a
+href="Mis Medicamentos.html"
+class="card">
+
+<div class="icono azul">
+
+<i class="fa-solid fa-pills"></i>
+
+</div>
+
+<div class="texto">
+
+<h3>
+
+Mis medicamentos
+
+</h3>
+
+<p>
+
+Consulta tus medicamentos
+
+</p>
+
+</div>
+
+<i class="fa-solid fa-angle-right flecha"></i>
+
+</a>
+
+<!-- Recordatorios -->
+
+<a
+href="Recordatorio.html"
+class="card">
+
+<div class="icono naranja">
+
+<i class="fa-solid fa-bell"></i>
+
+</div>
+
+<div class="texto">
+
+<h3>
+
+Recordatorios
+
+</h3>
+
+<p>
+
+Consulta tus próximas tomas
+
+</p>
+
+</div>
+
+<i class="fa-solid fa-angle-right flecha"></i>
+
+</a>
+
+<!-- Historial -->
+
+<a
+href="Historial.html"
+class="card">
+
+<div class="icono amarillo">
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+</div>
+
+<div class="texto">
+
+<h3>
+
+Historial
+
+</h3>
+
+<p>
+
+Revisa tu historial de tomas
+
+</p>
+
+</div>
+
+<i class="fa-solid fa-angle-right flecha"></i>
+
+</a>
+
+<!-- Cuidador -->
+
+<a
+href="Cuidador.html"
+class="card">
+
+<div class="icono morado">
+
+<i class="fa-solid fa-user-group"></i>
+
+</div>
+
+<div class="texto">
+
+<h3>
+
+Cuidador
+
+</h3>
+
+<p>
+
+Gestiona tus cuidadores y permisos
+
+</p>
+
+</div>
+
+<i class="fa-solid fa-angle-right flecha"></i>
+
+</a>
+
+</section>
+
+</div>
+
+<!--================ BARRA INFERIOR =================-->
+
+<nav class="bottom">
+
+<a
+href="dashboard.html"
+class="activo">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Inicio</span>
+
+</a>
+
+<a
+href="Mis Medicamentos.html">
+
+<i class="fa-solid fa-capsules"></i>
+
+<span>Medicamentos</span>
+
+</a>
+
+<a
+href="Recordatorio.html">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>Recordatorios</span>
+
+</a>
+
+<a
+href="Historial.html">
+
+<i class="fa-solid fa-clock"></i>
+
+<span>Historial</span>
+
+</a>
+
+<a
+href="Cuidador.html">
+
+<i class="fa-solid fa-user-group"></i>
+
+<span>Cuidador</span>
+
+</a>
+
+</nav>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

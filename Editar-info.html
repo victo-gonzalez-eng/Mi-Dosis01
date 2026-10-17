@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Editar Perfil | MiDosis</title>
+
+<link rel="stylesheet"
+href="Editar-info.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<!--========================-->
+<!-- ENCABEZADO -->
+<!--========================-->
+
+<header>
+
+<a href="perfil.html" class="volver">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</a>
+
+<h2>
+
+Editar información
+
+</h2>
+
+</header>
+
+<!--========================-->
+<!-- FOTO -->
+<!--========================-->
+
+<section class="fotoPerfil">
+
+<div class="foto">
+
+<img
+src="Usuario1.avif"
+id="foto">
+
+<label
+for="imagen">
+
+<i class="fa-solid fa-camera"></i>
+
+</label>
+
+<input
+type="file"
+id="imagen"
+accept="image/*">
+
+</div>
+
+<h3>
+
+Cambiar foto
+
+</h3>
+
+</section>
+
+<!--========================-->
+<!-- FORMULARIO -->
+<!--========================-->
+
+<form id="formulario">
+
+<label>
+
+Nombre
+
+</label>
+
+<div class="input">
+
+<i class="fa-regular fa-user"></i>
+
+<input
+type="text"
+id="nombre"
+placeholder="Ingrese su nombre"
+required>
+
+</div>
+
+<label>
+
+Apellido
+
+</label>
+
+<div class="input">
+
+<i class="fa-regular fa-user"></i>
+
+<input
+type="text"
+id="apellido"
+placeholder="Ingrese su apellido"
+required>
+
+</div>
+
+<label>
+
+Correo electrónico
+
+</label>
+
+<div class="input">
+
+<i class="fa-regular fa-envelope"></i>
+
+<input
+type="email"
+id="correo"
+placeholder="ejemplo@gmail.com"
+required>
+
+</div>
+
+<label>
+
+Teléfono
+
+</label>
+
+<div class="input">
+
+<i class="fa-solid fa-phone"></i>
+
+<input
+type="tel"
+id="telefono"
+placeholder="3001234567">
+
+</div>
+
+<label>
+
+Fecha de nacimiento
+
+</label>
+
+<div class="input">
+
+<i class="fa-solid fa-calendar"></i>
+
+<input
+type="date"
+id="fecha">
+
+</div>
+
+<label>
+
+Género
+
+</label>
+
+<div class="input">
+
+<i class="fa-solid fa-venus-mars"></i>
+
+<select id="genero">
+
+<option>
+
+Seleccione...
+
+</option>
+
+<option>
+
+Masculino
+
+</option>
+
+<option>
+
+Femenino
+
+</option>
+
+<option>
+
+Otro
+
+</option>
+
+</select>
+
+</div>
+
+<label>
+
+Dirección
+
+</label>
+
+<div class="input">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<input
+type="text"
+id="direccion"
+placeholder="Dirección">
+
+</div>
+
+<label>
+
+Grupo sanguíneo
+
+</label>
+
+<div class="input">
+
+<i class="fa-solid fa-droplet"></i>
+
+<select id="grupo">
+
+<option>
+
+Seleccione...
+
+</option>
+
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>AB+</option>
+<option>AB-</option>
+<option>O+</option>
+<option>O-</option>
+
+</select>
+
+</div>
+
+<label>
+
+Contacto de emergencia
+
+</label>
+
+<div class="input">
+
+<i class="fa-solid fa-user-group"></i>
+
+<input
+type="text"
+id="contacto"
+placeholder="Nombre del contacto">
+
+</div>
+
+<label>
+
+Teléfono de emergencia
+
+</label>
+
+<div class="input">
+
+<i class="fa-solid fa-phone-volume"></i>
+
+<input
+type="tel"
+id="telefonoEmergencia"
+placeholder="3000000000">
+
+</div>
+
+<div class="botones">
+
+<button
+type="submit"
+class="guardar">
+
+Guardar cambios
+
+</button>
+
+<button
+type="button"
+class="cancelar"
+onclick="window.location.href='perfil.html'">
+
+Cancelar
+
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<script src="Editar-info.js"></script>
+
+</body>
+
+</html>

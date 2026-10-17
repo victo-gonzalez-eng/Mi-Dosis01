@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Recordatorio de medicamento</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Recordatorio.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!--=================================
+                ENCABEZADO
+        ==================================-->
+
+        <header class="encabezado">
+
+            <button
+                id="btnVolver"
+                class="btn-regresar">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </button>
+
+            <h2>
+
+                Recordatorio
+
+            </h2>
+
+        </header>
+
+
+        <!--=================================
+                TARJETA
+        ==================================-->
+
+        <section class="tarjeta-recordatorio">
+
+            <div class="icono-superior">
+
+                <i class="fa-solid fa-bell"></i>
+
+            </div>
+
+            <h1>
+
+                ¡Es hora de tu medicamento!
+
+            </h1>
+
+
+            <!--==============================
+                INFORMACIÓN
+            ==============================-->
+
+            <div class="informacion">
+
+                <h2
+                    id="nombreMedicamento">
+
+                    Paracetamol 500mg
+
+                </h2>
+
+                <p
+                    id="dosisMedicamento">
+
+                    1 tableta
+
+                </p>
+
+            </div>
+
+
+            <!--==============================
+                HORA
+            ==============================-->
+
+            <div class="hora-programada">
+
+                <span>
+
+                    Hora programada
+
+                </span>
+
+                <div class="hora">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <span id="horaMedicamento">
+
+                        08:00 AM
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!--==============================
+                BOTONES
+            ==============================-->
+
+            <div class="acciones">
+
+                <button
+                    id="btnTomado"
+                    class="btn-tomado">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    Tomado
+
+                </button>
+
+                <button
+                    id="btnPosponer"
+                    class="btn-posponer">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    Posponer 15 min
+
+                </button>
+
+            </div>
+
+
+            <!--==============================
+                NO MOSTRAR
+            ==============================-->
+
+            <button
+                id="btnOcultar"
+                class="btn-ocultar">
+
+                No volver a mostrar
+
+            </button>
+
+        </section>
+
+    </div>
+
+
+
+    <!--=================================
+            MODAL DE CONFIRMACIÓN
+    ==================================-->
+
+    <div
+        id="modalConfirmacion"
+        class="modal">
+
+        <div class="modal-contenido">
+
+            <h3>
+
+                Confirmación
+
+            </h3>
+
+            <p
+                id="mensajeModal">
+
+            </p>
+
+            <button
+                id="cerrarModal">
+
+                Aceptar
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="Recordatorio.js"></script>
+
+</body>
+
+</html>

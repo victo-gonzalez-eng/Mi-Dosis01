@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi Dosis | Historial</title>
+
+    <link rel="stylesheet" href="Historial.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--====================================
+            MENÚ LATERAL
+=====================================-->
+
+<div id="menuLateral" class="menu-lateral">
+
+    <div class="menu-header">
+
+        <img src="log 1.png" alt="Mi Dosis">
+
+        <h2>Mi Dosis</h2>
+
+    </div>
+
+    <ul>
+
+        <li><a href="dashboard.html">
+            <i class="fa-solid fa-house"></i>
+            Inicio
+        </a></li>
+
+        <li><a href="Mis Medicamentos.html">
+            <i class="fa-solid fa-capsules"></i>
+            Medicamentos
+        </a></li>
+
+        <li><a href="Recordatorio.html">
+            <i class="fa-solid fa-bell"></i>
+            Recordatorios
+        </a></li>
+
+        <li><a href="Historial.html" class="activo">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            Historial
+        </a></li>
+
+        <li><a href="Cuidador.html">
+            <i class="fa-solid fa-user-group"></i>
+            Cuidador
+        </a></li>
+
+        <li><a href="Perfil.html">
+            <i class="fa-solid fa-user"></i>
+            Perfil
+        </a></li>
+
+        <li><a href="configuracion.html">
+            <i class="fa-solid fa-gear"></i>
+            Configuración
+        </a></li>
+
+        <li><a href="index.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Cerrar sesión
+        </a></li>
+
+    </ul>
+
+</div>
+
+<div id="overlay"></div>
+
+<!--====================================
+            CONTENEDOR
+=====================================-->
+
+<div class="contenedor">
+
+<!--====================================
+                HEADER
+=====================================-->
+
+<header>
+
+    <div class="volver">
+
+        <a href="dashboard.html">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </a>
+
+    </div>
+
+    <div class="titulo">
+
+        <h2>Historial</h2>
+
+    </div>
+
+    <div class="menu">
+
+        <i class="fa-solid fa-bars" id="abrirMenu"></i>
+
+    </div>
+
+</header>
+
+<!--====================================
+            PESTAÑAS
+=====================================-->
+
+<section class="tabs">
+
+    <button class="tab activo">
+
+        Resumen
+
+    </button>
+
+    <button class="tab">
+
+        Calendario
+
+    </button>
+
+</section>
+
+<!--====================================
+    CUMPLIMIENTO DEL TRATAMIENTO
+=====================================-->
+
+<section class="cumplimiento">
+
+    <h3>
+
+        Cumplimiento del tratamiento
+
+    </h3>
+
+    <div class="contenido-cumplimiento">
+
+        <!-- Círculo -->
+
+        <div class="grafica">
+
+            <div class="circulo">
+
+                <div class="centro">
+
+                    <h1 id="porcentaje">
+
+                        85%
+
+                    </h1>
+
+                    <span>
+
+                        Cumplimiento
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Estadísticas -->
+
+        <div class="estadisticas">
+
+            <div class="item">
+
+                <span class="verde"></span>
+
+                <p>Tomadas</p>
+
+                <strong id="tomadas">
+
+                    17
+
+                </strong>
+
+            </div>
+
+            <div class="item">
+
+                <span class="rojo"></span>
+
+                <p>Omitidas</p>
+
+                <strong id="omitidas">
+
+                    3
+
+                </strong>
+
+            </div>
+
+            <div class="item">
+
+                <span class="amarillo"></span>
+
+                <p>Pendientes</p>
+
+                <strong id="pendientes">
+
+                    2
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+        ACTIVIDAD RECIENTE
+=====================================-->
+
+<section class="actividad">
+
+    <h3>Actividad reciente</h3>
+
+    <!-- Medicamento 1 -->
+
+    <div class="actividad-card">
+
+        <div class="icono azul">
+
+            <i class="fa-solid fa-capsules"></i>
+
+        </div>
+
+        <div class="info">
+
+            <h4>Paracetamol 500 mg</h4>
+
+            <span>Hoy, 08:00 AM</span>
+
+        </div>
+
+        <div class="estado tomado">
+
+            Tomado
+
+        </div>
+
+    </div>
+
+    <!-- Medicamento 2 -->
+
+    <div class="actividad-card">
+
+        <div class="icono verde">
+
+            <i class="fa-solid fa-capsules"></i>
+
+        </div>
+
+        <div class="info">
+
+            <h4>Losartán 50 mg</h4>
+
+            <span>Ayer, 08:00 AM</span>
+
+        </div>
+
+        <div class="estado tomado">
+
+            Tomado
+
+        </div>
+
+    </div>
+
+    <!-- Medicamento 3 -->
+
+    <div class="actividad-card">
+
+        <div class="icono rojo">
+
+            <i class="fa-solid fa-capsules"></i>
+
+        </div>
+
+        <div class="info">
+
+            <h4>Ibuprofeno 400 mg</h4>
+
+            <span>Ayer, 02:00 PM</span>
+
+        </div>
+
+        <div class="estado omitido">
+
+            Omitido
+
+        </div>
+
+    </div>
+
+    <div class="ver-todas">
+
+        <a href="#">
+
+            Ver todas
+
+        </a>
+
+    </div>
+
+</section>
+
+</div>
+
+<!--====================================
+        BARRA INFERIOR
+=====================================-->
+
+<nav class="bottom">
+
+    <a href="dashboard.html">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>Inicio</span>
+
+    </a>
+
+    <a href="Mis Medicamentos.html">
+
+        <i class="fa-solid fa-capsules"></i>
+
+        <span>Medicamentos</span>
+
+    </a>
+
+    <a href="Recordatorio.html">
+
+        <i class="fa-solid fa-bell"></i>
+
+        <span>Recordatorios</span>
+
+    </a>
+
+    <a href="Historial.html" class="activo">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <span>Historial</span>
+
+    </a>
+
+    <a href="Cuidador.html">
+
+        <i class="fa-solid fa-user-group"></i>
+
+        <span>Cuidador</span>
+
+    </a>
+
+</nav>
+
+<script src="Historial.js"></script>
+
+</body>
+
+</html>

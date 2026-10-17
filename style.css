@@ -1,0 +1,171 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.contenedor{
+    width:380px;
+    background:#fff;
+    padding:35px;
+    border-radius:25px;
+
+    box-shadow:
+    0px 5px 20px rgba(0,0,0,0.08);
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.logo img{
+    width:240px;
+}
+
+.logo h2{
+    color:#1d6be0;
+    margin-top:5px;
+    font-size:30px;
+    font-weight:700;
+}
+
+.logo p{
+    color:#6d6d6d;
+    font-size:15px;
+    margin-top:3px;
+}
+
+label{
+    display:block;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+    color:#333;
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:18px;
+}
+
+.input-box i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#999;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px 45px;
+    border:1px solid #dcdcdc;
+    border-radius:10px;
+    font-size:14px;
+    outline:none;
+}
+
+.input-box input:focus{
+    border-color:#2f7df6;
+}
+
+.ojo{
+    right:15px;
+    left:auto !important;
+    cursor:pointer;
+}
+
+.olvido{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    color:#2f7df6;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.btn-login{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+
+    background:linear-gradient(
+    to right,
+    #2f7df6,
+    #1f66db
+    );
+
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+
+    margin-bottom:15px;
+
+    transition:.3s;
+}
+
+.btn-login:hover{
+    transform:scale(1.02);
+}
+
+.btn-gmail{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background:#fff;
+    border:2px solid #e0e0e0;
+
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+
+    margin-bottom:25px;
+}
+
+.btn-gmail i{
+    color:#DB4437;
+    margin-right:10px;
+}
+
+.separador{
+    text-align:center;
+    margin-bottom:20px;
+    color:#666;
+}
+
+.btn-registro{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+
+    padding:14px;
+
+    border-radius:30px;
+
+    border:2px solid #2f7df6;
+
+    color:#2f7df6;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-registro:hover{
+    background:#2f7df6;
+    color:white;
+}
+}

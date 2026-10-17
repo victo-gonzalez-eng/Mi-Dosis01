@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Medicamento</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="Registro Medicamento.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- ENCABEZADO -->
+        <header class="encabezado">
+
+            <button class="btn-regresar" id="btnRegresar">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <h2>Registrar medicamento</h2>
+
+        </header>
+
+        <!-- FORMULARIO -->
+
+        <form id="formMedicamento">
+
+            <!-- Nombre -->
+
+            <div class="grupo">
+
+                <label>
+                    Nombre del medicamento
+                </label>
+
+                <div class="campo">
+
+                    <i class="fa-solid fa-capsules"></i>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        placeholder="Ej. Paracetamol 500mg"
+                        required>
+
+                </div>
+
+            </div>
+
+            <!-- Dosis -->
+
+            <div class="grupo">
+
+                <label>
+                    Dosis
+                </label>
+
+                <div class="campo">
+
+                    <i class="fa-solid fa-prescription-bottle-medical"></i>
+
+                    <input
+                        type="text"
+                        id="dosis"
+                        placeholder="Ej. 1 tableta"
+                        required>
+
+                </div>
+
+            </div>
+
+            <!-- Frecuencia -->
+
+            <div class="grupo">
+
+                <label>
+                    Frecuencia
+                </label>
+
+                <div class="campo">
+
+                    <i class="fa-solid fa-rotate"></i>
+
+                    <select id="frecuencia" required>
+
+                        <option value="">
+                            Selecciona frecuencia
+                        </option>
+
+                        <option value="Cada 4 horas">
+                            Cada 4 horas
+                        </option>
+
+                        <option value="Cada 6 horas">
+                            Cada 6 horas
+                        </option>
+
+                        <option value="Cada 8 horas">
+                            Cada 8 horas
+                        </option>
+
+                        <option value="Cada 12 horas">
+                            Cada 12 horas
+                        </option>
+
+                        <option value="Cada 24 horas">
+                            Cada 24 horas
+                        </option>
+
+                        <option value="Una vez al día">
+                            Una vez al día
+                        </option>
+
+                        <option value="Dos veces al día">
+                            Dos veces al día
+                        </option>
+
+                        <option value="Tres veces al día">
+                            Tres veces al día
+                        </option>
+
+                        <option value="Solo cuando sea necesario">
+                            Solo cuando sea necesario
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- Hora -->
+
+            <div class="grupo">
+
+                <label>
+                    Hora
+                </label>
+
+                <div class="campo">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <input
+                        type="time"
+                        id="hora"
+                        required>
+
+                </div>
+
+            </div>
+
+            <!-- Fecha Inicio -->
+
+            <div class="grupo">
+
+                <label>
+                    Fecha de inicio
+                </label>
+
+                <div class="campo">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <input
+                        type="date"
+                        id="fechaInicio"
+                        required>
+
+                </div>
+
+            </div>
+
+            <!-- Fecha Final -->
+
+            <div class="grupo">
+
+                <label>
+                    Fecha final (opcional)
+                </label>
+
+                <div class="campo">
+
+                    <i class="fa-regular fa-calendar-days"></i>
+
+                    <input
+                        type="date"
+                        id="fechaFinal">
+
+                </div>
+
+            </div>
+
+            <!-- MENSAJE -->
+
+            <div id="mensaje"></div>
+
+            <!-- BOTÓN -->
+
+            <button
+                type="submit"
+                class="btn-guardar">
+
+                Guardar medicamento
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="Registro Medicamento.js"></script>
+
+</body>
+
+</html>

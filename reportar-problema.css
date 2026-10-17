@@ -1,0 +1,971 @@
+/*==================================================
+                VARIABLES
+==================================================*/
+
+:root{
+
+    --azul:#1E63D6;
+    --azulOscuro:#154AA5;
+    --azulClaro:#EAF3FF;
+
+    --gris:#F5F7FB;
+    --grisTexto:#666666;
+
+    --blanco:#FFFFFF;
+
+    --borde:#E5E7EB;
+
+    --verde:#34C759;
+    --amarillo:#F4B400;
+    --rojo:#E53935;
+
+    --sombra:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+                GENERAL
+==================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+body{
+
+    background:var(--gris);
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+/*==================================================
+                CONTENEDOR
+==================================================*/
+
+.contenedor{
+
+    width:100%;
+    max-width:430px;
+
+    background:var(--blanco);
+
+    min-height:100vh;
+
+    padding-bottom:95px;
+
+    box-shadow:var(--sombra);
+
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+header{
+
+    background:linear-gradient(
+    135deg,
+    var(--azul),
+    var(--azulOscuro)
+    );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px;
+
+}
+
+header h2{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.btn-volver{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}
+
+.espacio{
+
+    width:25px;
+
+}
+
+/*==================================================
+                CABECERA
+==================================================*/
+
+.cabecera{
+
+    text-align:center;
+
+    padding:30px 20px;
+
+}
+
+.cabecera img{
+
+    width:130px;
+
+    margin-bottom:20px;
+
+}
+
+.cabecera h1{
+
+    font-size:28px;
+
+    color:#333;
+
+    margin-bottom:12px;
+
+}
+
+.cabecera p{
+
+    color:var(--grisTexto);
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+                FORMULARIO
+==================================================*/
+
+.formulario{
+
+    margin:0 20px 25px;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.grupo{
+
+    margin-bottom:20px;
+
+}
+
+.grupo label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#333;
+
+}
+
+.grupo input,
+
+.grupo select,
+
+.grupo textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid var(--borde);
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:#FAFAFA;
+
+    transition:.30s;
+
+}
+
+.grupo textarea{
+
+    resize:none;
+
+}
+
+.grupo input:focus,
+
+.grupo select:focus,
+
+.grupo textarea:focus{
+
+    border-color:var(--azul);
+
+    background:white;
+
+    box-shadow:0 0 0 4px rgba(30,99,214,.10);
+
+}
+
+/*==================================================
+                PRIORIDAD
+==================================================*/
+
+.prioridad{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    margin-top:8px;
+
+}
+
+.prioridad label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px;
+
+    border:1px solid var(--borde);
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    background:white;
+
+}
+
+.prioridad input{
+
+    width:auto;
+
+}
+
+/*==================================================
+                CONTADOR
+==================================================*/
+
+.contador{
+
+    margin-top:8px;
+
+    text-align:right;
+
+    font-size:13px;
+
+    color:#777;
+
+}
+
+/*==================================================
+            INPUT FILE
+==================================================*/
+
+input[type=file]{
+
+    background:white;
+
+    cursor:pointer;
+
+}
+
+/*==================================================
+        INFORMACIÓN DEL SISTEMA
+==================================================*/
+
+.informacion{
+
+    background:var(--azulClaro);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+}
+
+.informacion h3{
+
+    color:#333;
+
+    margin-bottom:15px;
+
+}
+
+.dato{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:12px;
+
+    font-size:15px;
+
+}
+
+.dato:last-child{
+
+    margin-bottom:0;
+
+}
+
+.dato span{
+
+    color:#666;
+
+}
+
+.dato strong{
+
+    color:#222;
+
+}
+
+/*==================================================
+                BOTONES
+==================================================*/
+
+.botones{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.btnEnviar{
+
+    background:var(--azul);
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+.btnEnviar i{
+
+    margin-right:8px;
+
+}
+
+.btnEnviar:hover{
+
+    background:var(--azulOscuro);
+
+}
+
+.btnCancelar{
+
+    text-decoration:none;
+
+    text-align:center;
+
+    padding:15px;
+
+    background:#ECECEC;
+
+    color:#333;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+}
+
+.btnCancelar:hover{
+
+    background:#DDDDDD;
+
+}
+
+/*==================================================
+            RECOMENDACIONES
+==================================================*/
+
+.recomendaciones{
+
+    margin:0 20px 25px;
+
+    padding:22px;
+
+    background:var(--azulClaro);
+
+    border-radius:20px;
+
+}
+
+.recomendaciones h3{
+
+    color:#333;
+
+    margin-bottom:15px;
+
+}
+
+.recomendaciones h3 i{
+
+    color:var(--azul);
+
+    margin-right:8px;
+
+}
+
+.recomendaciones ul{
+
+    padding-left:20px;
+
+}
+
+.recomendaciones li{
+
+    margin-bottom:10px;
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+            TRANSICIONES
+==================================================*/
+
+button,
+a,
+input,
+textarea,
+select{
+
+    transition:.30s;
+
+}
+
+/*==================================================
+            BARRA DE NAVEGACIÓN
+==================================================*/
+
+.bottom{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    max-width:430px;
+
+    height:75px;
+
+    background:var(--blanco);
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.08);
+
+    z-index:1000;
+
+}
+
+.bottom a{
+
+    width:25%;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#808080;
+
+    font-size:12px;
+
+    transition:.30s;
+
+}
+
+.bottom a i{
+
+    font-size:22px;
+
+    margin-bottom:5px;
+
+}
+
+.bottom a:hover{
+
+    color:var(--azul);
+
+}
+
+.bottom a:hover i{
+
+    transform:translateY(-3px);
+
+}
+
+.bottom a.activo{
+
+    color:var(--azul);
+
+    font-weight:bold;
+
+}
+
+/*==================================================
+            EFECTOS BOTONES
+==================================================*/
+
+.btnEnviar:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(30,99,214,.25);
+
+}
+
+.btnCancelar:hover{
+
+    transform:translateY(-3px);
+
+}
+
+.btn-volver:hover{
+
+    transform:translateX(-4px);
+
+}
+
+/*==================================================
+            TARJETA FORMULARIO
+==================================================*/
+
+.formulario{
+
+    transition:.35s;
+
+}
+
+.formulario:hover{
+
+    box-shadow:0 15px 30px rgba(0,0,0,.10);
+
+}
+
+/*==================================================
+            CAMPOS
+==================================================*/
+
+.grupo input:hover,
+.grupo textarea:hover,
+.grupo select:hover{
+
+    border-color:var(--azul);
+
+}
+
+.grupo input:focus,
+.grupo textarea:focus,
+.grupo select:focus{
+
+    transform:scale(1.01);
+
+}
+
+/*==================================================
+            PRIORIDAD
+==================================================*/
+
+.prioridad label{
+
+    transition:.30s;
+
+}
+
+.prioridad label:hover{
+
+    background:var(--azulClaro);
+
+    border-color:var(--azul);
+
+}
+
+.prioridad input[type="radio"]{
+
+    accent-color:var(--azul);
+
+}
+
+/*==================================================
+            INPUT FILE
+==================================================*/
+
+input[type=file]{
+
+    padding:12px;
+
+    border:1px dashed #BFC8D8;
+
+    border-radius:12px;
+
+    background:#F9FBFF;
+
+}
+
+input[type=file]:hover{
+
+    border-color:var(--azul);
+
+}
+
+/*==================================================
+        RECOMENDACIONES
+==================================================*/
+
+.recomendaciones{
+
+    transition:.35s;
+
+}
+
+.recomendaciones:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+            ANIMACIONES
+==================================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+header{
+
+    animation:aparecer .4s ease;
+
+}
+
+.cabecera{
+
+    animation:aparecer .6s ease;
+
+}
+
+.formulario{
+
+    animation:aparecer .8s ease;
+
+}
+
+.recomendaciones{
+
+    animation:aparecer 1s ease;
+
+}
+
+/*==================================================
+            MENSAJES
+==================================================*/
+
+.error{
+
+    color:#E53935;
+
+    font-size:13px;
+
+    margin-top:5px;
+
+}
+
+.exito{
+
+    color:#2E7D32;
+
+    text-align:center;
+
+    font-weight:bold;
+
+    margin-top:15px;
+
+    font-size:14px;
+
+}
+
+/*==================================================
+            BOTÓN DESHABILITADO
+==================================================*/
+
+.btnEnviar:disabled{
+
+    background:#B8C2CF;
+
+    cursor:not-allowed;
+
+    box-shadow:none;
+
+}
+
+/*==================================================
+            SCROLL
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#CCCCCC;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F5F5F5;
+
+}
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media(max-width:430px){
+
+header{
+
+    padding:16px;
+
+}
+
+.cabecera{
+
+    padding:25px 18px;
+
+}
+
+.cabecera img{
+
+    width:115px;
+
+}
+
+.cabecera h1{
+
+    font-size:24px;
+
+}
+
+.cabecera p{
+
+    font-size:15px;
+
+}
+
+.formulario{
+
+    margin:0 15px 20px;
+
+    padding:20px;
+
+}
+
+.recomendaciones{
+
+    margin:0 15px 20px;
+
+    padding:20px;
+
+}
+
+.grupo input,
+.grupo textarea,
+.grupo select{
+
+    font-size:14px;
+
+}
+
+.btnEnviar,
+.btnCancelar{
+
+    font-size:15px;
+
+    padding:14px;
+
+}
+
+.bottom{
+
+    height:72px;
+
+}
+
+}
+
+/*==================================================
+            COMPUTADORES
+==================================================*/
+
+@media(min-width:900px){
+
+body{
+
+    background:#EAF0F8;
+
+}
+
+.contenedor{
+
+    margin:30px auto;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+}
+
+.bottom{
+
+    border-bottom-left-radius:28px;
+
+    border-bottom-right-radius:28px;
+
+}
+
+}
+
+/*==================================================
+            EFECTOS GENERALES
+==================================================*/
+
+button,
+a,
+input,
+textarea,
+select{
+
+    transition:.30s;
+
+}
+
+button:active,
+a:active{
+
+    transform:scale(.97);
+
+}
+
+/*==================================================
+            SOMBRAS
+==================================================*/
+
+.formulario{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.recomendaciones{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+            FIN DEL CSS
+==================================================*/

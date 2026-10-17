@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Mi Dosis | Cuidador</title>
+
+<link rel="stylesheet" href="Cuidador.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<!--====================================
+            MENÚ LATERAL
+=====================================-->
+
+<div id="menuLateral" class="menu-lateral">
+
+<div class="menu-header">
+
+<img src="log 1.png">
+
+<h2>Mi Dosis</h2>
+
+</div>
+
+<ul>
+
+<li>
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+Inicio
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Mis Medicamentos.html">
+
+<i class="fa-solid fa-capsules"></i>
+
+Medicamentos
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Recordatorio.html">
+
+<i class="fa-solid fa-bell"></i>
+
+Recordatorios
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Historial.html">
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Historial
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Cuidador.html"
+class="activo">
+
+<i class="fa-solid fa-user-group"></i>
+
+Cuidador
+
+</a>
+
+</li>
+
+<li>
+
+<a href="Perfil.html">
+
+<i class="fa-solid fa-user"></i>
+
+Perfil
+
+</a>
+
+</li>
+
+<li>
+
+<a href="configuracion.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Configuración
+
+</a>
+
+</li>
+
+<li>
+
+<a href="index.html">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Cerrar sesión
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div id="overlay"></div>
+
+<!--====================================
+            CONTENEDOR
+=====================================-->
+
+<div class="contenedor">
+
+<!--====================================
+            HEADER
+=====================================-->
+
+<header>
+
+<div class="menu">
+
+<i
+class="fa-solid fa-bars"
+id="abrirMenu">
+
+</i>
+
+</div>
+
+<div class="titulo">
+
+<h2>
+
+Cuidador
+
+</h2>
+
+</div>
+
+<div class="notificaciones">
+
+<i class="fa-regular fa-bell"></i>
+
+<span>2</span>
+
+</div>
+
+</header>
+
+<!--====================================
+            SALUDO
+=====================================-->
+
+<section class="saludo">
+
+<div class="texto-saludo">
+
+<h2>
+
+Hola, Victor!
+
+👋
+
+</h2>
+
+<p>
+
+Estás cuidando a 2 personas.
+
+</p>
+
+</div>
+
+<div class="avatar">
+
+<img
+src="Usuario1.avif"
+alt="Perfil">
+
+</div>
+
+</section>
+
+<!--====================================
+        PERSONAS A CARGO
+=====================================-->
+
+<section class="personas">
+
+<div class="titulo-seccion">
+
+<h3>
+
+Personas a tu cuidado
+
+</h3>
+
+<a href="#">
+
+Ver todos
+
+</a>
+
+</div>
+
+<!--==============================
+        PERSONA 1
+===============================-->
+
+<div class="persona-card">
+
+<div class="foto">
+
+<img
+src="Papá.png"
+alt="Papá">
+
+</div>
+
+<div class="datos">
+
+<h4>
+
+Papá
+
+</h4>
+
+<span>
+
+Juan Pérez
+
+</span>
+
+</div>
+
+<div class="estado verde">
+
+Todo al día
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+<i class="fa-solid fa-angle-right flecha"></i>
+
+</div>
+
+<!--==============================
+        PERSONA 2
+===============================-->
+
+<div class="persona-card">
+
+<div class="foto">
+
+<img
+src="Mamá.png"
+alt="Mamá">
+
+</div>
+
+<div class="datos">
+
+<h4>
+
+Mamá
+
+</h4>
+
+<span>
+
+Ana Pérez
+
+</span>
+
+</div>
+
+<div class="estado naranja">
+
+1 pendiente
+
+<i class="fa-solid fa-circle-exclamation"></i>
+
+</div>
+
+<i class="fa-solid fa-angle-right flecha"></i>
+
+</div>
+
+</section>
+<!--====================================
+        PRÓXIMOS RECORDATORIOS
+=====================================-->
+
+<section class="recordatorios">
+
+    <div class="titulo-seccion">
+
+        <h3>Próximos recordatorios</h3>
+
+        <a href="#">Ver calendario</a>
+
+    </div>
+
+    <!-- Recordatorio 1 -->
+
+    <div class="recordatorio-card">
+
+        <div class="icono-recordatorio morado">
+
+            <i class="fa-regular fa-clock"></i>
+
+        </div>
+
+        <div class="info-recordatorio">
+
+            <h4>Papá - Losartán 50mg</h4>
+
+            <span>Hoy, 10:00 AM</span>
+
+        </div>
+
+        <div class="tiempo azul">
+
+            En 20 min
+
+        </div>
+
+        <i class="fa-solid fa-angle-right flecha"></i>
+
+    </div>
+
+    <!-- Recordatorio 2 -->
+
+    <div class="recordatorio-card">
+
+        <div class="icono-recordatorio naranja">
+
+            <i class="fa-regular fa-clock"></i>
+
+        </div>
+
+        <div class="info-recordatorio">
+
+            <h4>Mamá - Metformina 850mg</h4>
+
+            <span>Hoy, 02:00 PM</span>
+
+        </div>
+
+        <div class="tiempo naranja">
+
+            En 4 h
+
+        </div>
+
+        <i class="fa-solid fa-angle-right flecha"></i>
+
+    </div>
+
+</section>
+
+<!--====================================
+        RESUMEN GENERAL
+=====================================-->
+
+<section class="resumen">
+
+    <h3>Resumen general</h3>
+
+    <div class="estadisticas">
+
+        <div class="estadistica">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2>12</h2>
+
+            <span>Tomados</span>
+
+        </div>
+
+        <div class="estadistica">
+
+            <i class="fa-solid fa-circle-xmark"></i>
+
+            <h2>1</h2>
+
+            <span>Omitidos</span>
+
+        </div>
+
+        <div class="estadistica">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h2>2</h2>
+
+            <span>Pendientes</span>
+
+        </div>
+
+        <div class="estadistica">
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <h2>2</h2>
+
+            <span>Personas</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--====================================
+        TARJETA INFORMATIVA
+=====================================-->
+
+<section class="info-cuidador">
+
+    <div class="mensaje">
+
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <p>
+
+            Como cuidador puedes ayudar a tus seres queridos a cumplir sus tratamientos.
+
+        </p>
+
+    </div>
+
+</section>
+
+</div>
+
+<!--====================================
+        BARRA INFERIOR
+=====================================-->
+
+<nav class="bottom">
+
+    <a href="dashboard.html">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>Inicio</span>
+
+    </a>
+
+    <a href="Mis Medicamentos.html">
+
+        <i class="fa-solid fa-capsules"></i>
+
+        <span>Medicamentos</span>
+
+    </a>
+
+    <a href="Recordatorio.html">
+
+        <i class="fa-solid fa-bell"></i>
+
+        <span>Recordatorios</span>
+
+    </a>
+
+    <a href="Historial.html">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <span>Historial</span>
+
+    </a>
+
+    <a href="Cuidador.html" class="activo">
+
+        <i class="fa-solid fa-user-group"></i>
+
+        <span>Cuidador</span>
+
+    </a>
+
+</nav>
+
+<script src="Cuidador.js"></script>
+
+</body>
+</html>
+

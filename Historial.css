@@ -1,0 +1,1231 @@
+/*==================================================
+                VARIABLES
+==================================================*/
+
+:root{
+
+    --azul:#1E63D6;
+    --azulOscuro:#154AA5;
+
+    --verde:#34C759;
+    --rojo:#FF3B30;
+    --amarillo:#FFC107;
+    --gris:#F5F7FB;
+    --grisTexto:#666666;
+    --blanco:#FFFFFF;
+
+    --sombra:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+                GENERAL
+==================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+body{
+
+    background:var(--gris);
+
+    display:flex;
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+.contenedor{
+
+    width:100%;
+    max-width:430px;
+
+    background:white;
+
+    min-height:100vh;
+
+    position:relative;
+
+    padding-bottom:95px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+}
+
+/*==================================================
+                HEADER
+==================================================*/
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 20px;
+
+    background:white;
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.volver i{
+
+    font-size:22px;
+
+    color:#333;
+
+    cursor:pointer;
+
+}
+
+.menu i{
+
+    font-size:22px;
+
+    color:#333;
+
+    cursor:pointer;
+
+}
+
+.titulo h2{
+
+    font-size:22px;
+
+    color:#222;
+
+    font-weight:700;
+
+}
+
+/*==================================================
+                MENÚ LATERAL
+==================================================*/
+
+.menu-lateral{
+
+    position:fixed;
+
+    left:-280px;
+
+    top:0;
+
+    width:280px;
+
+    height:100%;
+
+    background:white;
+
+    transition:.35s;
+
+    box-shadow:5px 0 25px rgba(0,0,0,.20);
+
+    z-index:1000;
+
+    overflow-y:auto;
+
+}
+
+.menu-lateral.activo{
+
+    left:0;
+
+}
+
+.menu-header{
+
+    background:linear-gradient(
+        135deg,
+        var(--azul),
+        var(--azulOscuro)
+    );
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+}
+
+.menu-header img{
+
+    width:80px;
+
+    margin-bottom:10px;
+
+}
+
+.menu-header h2{
+
+    font-size:25px;
+
+}
+
+.menu-lateral ul{
+
+    list-style:none;
+
+}
+
+.menu-lateral li{
+
+    border-bottom:1px solid #EFEFEF;
+
+}
+
+.menu-lateral li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:18px 22px;
+
+    font-weight:600;
+
+}
+
+.menu-lateral li a:hover{
+
+    background:#EDF5FF;
+
+    color:var(--azul);
+
+}
+
+.menu-lateral li a i{
+
+    width:22px;
+
+    color:var(--azul);
+
+}
+
+.menu-lateral a.activo{
+
+    background:#EDF5FF;
+
+    color:var(--azul);
+
+}
+
+/*==================================================
+                OVERLAY
+==================================================*/
+
+#overlay{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.35);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.30s;
+
+    z-index:900;
+
+}
+
+#overlay.activo{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/*==================================================
+                PESTAÑAS
+==================================================*/
+
+.tabs{
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    background:white;
+
+    border-bottom:1px solid #ECECEC;
+
+}
+
+.tab{
+
+    width:50%;
+
+    padding:16px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#777;
+
+    transition:.30s;
+
+}
+
+.tab.activo{
+
+    color:var(--azul);
+
+    border-bottom:3px solid var(--azul);
+
+}
+
+/*==================================================
+        CUMPLIMIENTO DEL TRATAMIENTO
+==================================================*/
+
+.cumplimiento{
+
+    padding:22px 20px;
+
+}
+
+.cumplimiento h3{
+
+    font-size:21px;
+
+    color:#222;
+
+    margin-bottom:20px;
+
+}
+
+.contenido-cumplimiento{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+/*==================================================
+        GRÁFICO DE CUMPLIMIENTO
+==================================================*/
+
+.grafica{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.circulo{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    background:conic-gradient(
+
+        var(--azul) 0% 85%,
+
+        #E8ECF5 85% 100%
+
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:var(--sombra);
+
+}
+
+.centro{
+
+    width:130px;
+
+    height:130px;
+
+    background:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.centro h1{
+
+    font-size:34px;
+
+    color:var(--azul);
+
+    font-weight:bold;
+
+}
+
+.centro span{
+
+    font-size:14px;
+
+    color:var(--grisTexto);
+
+}
+
+/*==================================================
+        ESTADÍSTICAS
+==================================================*/
+
+.estadisticas{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.item{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:14px 16px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    box-shadow:var(--sombra);
+
+}
+
+.item span{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+}
+
+.verde{
+
+    background:var(--verde);
+
+}
+
+.rojo{
+
+    background:var(--rojo);
+
+}
+
+.amarillo{
+
+    background:var(--amarillo);
+
+}
+
+.item p{
+
+    flex:1;
+
+    margin-left:12px;
+
+    font-size:15px;
+
+    color:#444;
+
+}
+
+.item strong{
+
+    font-size:20px;
+
+    color:#222;
+
+}
+
+/*==================================================
+        ACTIVIDAD RECIENTE
+==================================================*/
+
+.actividad{
+
+    padding:0 20px 25px;
+
+}
+
+.actividad h3{
+
+    font-size:21px;
+
+    color:#222;
+
+    margin-bottom:18px;
+
+}
+
+.actividad-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:16px;
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+    box-shadow:var(--sombra);
+
+    transition:.30s;
+
+}
+
+.actividad-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.icono{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:22px;
+
+}
+
+.icono.azul{
+
+    background:var(--azul);
+
+}
+
+.icono.verde{
+
+    background:var(--verde);
+
+}
+
+.icono.rojo{
+
+    background:var(--rojo);
+
+}
+
+.info{
+
+    flex:1;
+
+    margin-left:15px;
+
+}
+
+.info h4{
+
+    font-size:17px;
+
+    color:#222;
+
+    margin-bottom:5px;
+
+}
+
+.info span{
+
+    font-size:14px;
+
+    color:var(--grisTexto);
+
+}
+
+.estado{
+
+    padding:8px 14px;
+
+    border-radius:25px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.estado.tomado{
+
+    background:#E8F8EC;
+
+    color:var(--verde);
+
+}
+
+.estado.omitido{
+
+    background:#FFE8E8;
+
+    color:var(--rojo);
+
+}
+
+.ver-todas{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+.ver-todas a{
+
+    color:var(--azul);
+
+    font-weight:600;
+
+    font-size:15px;
+
+}
+
+.ver-todas a:hover{
+
+    text-decoration:underline;
+
+}
+/*==================================================
+            BARRA INFERIOR
+==================================================*/
+
+.bottom{
+
+    position:fixed;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+
+    max-width:430px;
+
+    height:75px;
+
+    background:var(--blanco);
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    box-shadow:0 -5px 20px rgba(0,0,0,.08);
+
+    z-index:500;
+
+}
+
+.bottom a{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#8A8A8A;
+
+    text-decoration:none;
+
+    transition:.30s;
+
+}
+
+.bottom a i{
+
+    font-size:22px;
+
+    margin-bottom:4px;
+
+}
+
+.bottom a span{
+
+    font-size:12px;
+
+}
+
+.bottom a:hover{
+
+    color:var(--azul);
+
+}
+
+.bottom a.activo{
+
+    color:var(--azul);
+
+    font-weight:600;
+
+}
+
+/*==================================================
+            ANIMACIONES
+==================================================*/
+
+.actividad-card,
+.item,
+.tab{
+
+    transition:.30s;
+
+}
+
+.actividad-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+
+}
+
+.item:hover{
+
+    transform:scale(1.02);
+
+}
+
+.tab:hover{
+
+    background:#F4F8FF;
+
+}
+
+.tab:active{
+
+    transform:scale(.98);
+
+}
+
+/*==================================================
+        EFECTO DEL CÍRCULO
+==================================================*/
+
+.circulo{
+
+    animation:girarEntrada 1s ease;
+
+}
+
+@keyframes girarEntrada{
+
+    from{
+
+        transform:scale(.8) rotate(-180deg);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+}
+
+/*==================================================
+            EFECTO GENERAL
+==================================================*/
+
+header,
+.tabs,
+.cumplimiento,
+.actividad{
+
+    animation:subir .5s ease;
+
+}
+
+@keyframes subir{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media(max-width:430px){
+
+    .contenido-cumplimiento{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .estadisticas{
+
+        width:100%;
+
+    }
+
+    .circulo{
+
+        width:155px;
+
+        height:155px;
+
+    }
+
+    .centro{
+
+        width:120px;
+
+        height:120px;
+
+    }
+
+    .centro h1{
+
+        font-size:30px;
+
+    }
+
+}
+
+/*==================================================
+            TABLETS
+==================================================*/
+
+@media(min-width:431px){
+
+    .contenedor{
+
+        margin:auto;
+
+    }
+
+}
+
+/*==================================================
+        ESCRITORIO
+==================================================*/
+
+@media(min-width:900px){
+
+    body{
+
+        background:#E9EEF6;
+
+    }
+
+    .contenedor{
+
+        margin:25px auto;
+
+        border-radius:25px;
+
+        overflow:hidden;
+
+    }
+
+}
+
+/*==================================================
+            EFECTOS DEL MENÚ
+==================================================*/
+
+.menu i,
+.volver i{
+
+    transition:.30s;
+
+}
+
+.menu i:hover{
+
+    color:var(--azul);
+
+    transform:rotate(90deg);
+
+}
+
+.volver i:hover{
+
+    color:var(--azul);
+
+    transform:translateX(-4px);
+
+}
+
+/*==================================================
+        EFECTO ICONOS ACTIVIDAD
+==================================================*/
+
+.icono{
+
+    transition:.30s;
+
+}
+
+.actividad-card:hover .icono{
+
+    transform:rotate(15deg) scale(1.08);
+
+}
+
+/*==================================================
+        EFECTO ESTADOS
+==================================================*/
+
+.estado{
+
+    transition:.30s;
+
+}
+
+.estado.tomado:hover{
+
+    background:var(--verde);
+
+    color:white;
+
+}
+
+.estado.omitido:hover{
+
+    background:var(--rojo);
+
+    color:white;
+
+}
+
+/*==================================================
+            EFECTO BOTONES
+==================================================*/
+
+button{
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/*==================================================
+        EFECTO ENLACES
+==================================================*/
+
+a{
+
+    transition:.30s;
+
+}
+
+a:hover{
+
+    opacity:.9;
+
+}
+
+/*==================================================
+        SCROLL PERSONALIZADO
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#F3F3F3;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#C6C6C6;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#9A9A9A;
+
+}
+
+/*==================================================
+        SELECCIÓN DE TEXTO
+==================================================*/
+
+::selection{
+
+    background:var(--azul);
+
+    color:white;
+
+}
+
+/*==================================================
+        SOMBRAS GENERALES
+==================================================*/
+
+.actividad-card,
+.item,
+.circulo{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+/*==================================================
+        TRANSICIONES GENERALES
+==================================================*/
+
+*{
+
+    transition:
+        background .30s,
+        color .30s,
+        transform .30s,
+        box-shadow .30s;
+
+}
+
+/*==================================================
+        MENÚ LATERAL ACTIVO
+==================================================*/
+
+.menu-lateral a.activo{
+
+    background:#EDF5FF;
+
+    color:var(--azul);
+
+    border-left:4px solid var(--azul);
+
+}
+
+.menu-lateral a.activo i{
+
+    color:var(--azul);
+
+}
+
+/*==================================================
+        BARRA INFERIOR ACTIVA
+==================================================*/
+
+.bottom a.activo{
+
+    color:var(--azul);
+
+}
+
+.bottom a.activo i{
+
+    transform:scale(1.12);
+
+}
+
+/*==================================================
+        EFECTO DE ENTRADA
+==================================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+header{
+
+    animation:fadeUp .4s ease;
+
+}
+
+.tabs{
+
+    animation:fadeUp .5s ease;
+
+}
+
+.cumplimiento{
+
+    animation:fadeUp .6s ease;
+
+}
+
+.actividad{
+
+    animation:fadeUp .7s ease;
+
+}
+
+/*==================================================
+        RESPONSIVE EXTRA
+==================================================*/
+
+@media(max-width:360px){
+
+    .titulo h2{
+
+        font-size:18px;
+
+    }
+
+    .actividad-card{
+
+        padding:12px;
+
+    }
+
+    .info h4{
+
+        font-size:15px;
+
+    }
+
+    .estado{
+
+        font-size:11px;
+
+        padding:6px 10px;
+
+    }
+
+    .bottom a span{
+
+        font-size:10px;
+
+    }
+
+}
+
+/*==================================================
+        FIN DEL ARCHIVO
+        HISTORIAL.CSS
+==================================================*/

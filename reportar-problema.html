@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Reportar un Problema | MiDosis</title>
+
+<link rel="stylesheet"
+href="reportar-problema.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<!--==========================
+        ENCABEZADO
+===========================-->
+
+<header>
+
+<button
+id="volver"
+class="btn-volver">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+</button>
+
+<h2>
+
+Reportar un problema
+
+</h2>
+
+<div class="espacio"></div>
+
+</header>
+
+<!--==========================
+        CABECERA
+===========================-->
+
+<section class="cabecera">
+
+<img
+src="cuidado.avif"
+alt="Reporte">
+
+<h1>
+
+Reporta un inconveniente
+
+</h1>
+
+<p>
+
+Ayúdanos a mejorar MiDosis reportando cualquier error o inconveniente que encuentres en la aplicación.
+
+</p>
+
+</section>
+
+<!--==========================
+        FORMULARIO
+===========================-->
+
+<section class="formulario">
+
+<form id="formReporte">
+
+<!-- Nombre -->
+
+<div class="grupo">
+
+<label>
+
+Nombre completo
+
+</label>
+
+<input
+
+type="text"
+
+id="nombre"
+
+placeholder="Ingrese su nombre completo"
+
+required>
+
+</div>
+
+<!-- Correo -->
+
+<div class="grupo">
+
+<label>
+
+Correo electrónico
+
+</label>
+
+<input
+
+type="email"
+
+id="correo"
+
+placeholder="correo@ejemplo.com"
+
+required>
+
+</div>
+
+<!-- Tipo -->
+
+<div class="grupo">
+
+<label>
+
+Tipo de problema
+
+</label>
+
+<select
+
+id="tipoProblema"
+
+required>
+
+<option value="">
+
+Seleccione una opción
+
+</option>
+
+<option>
+
+Error al iniciar sesión
+
+</option>
+
+<option>
+
+Error al registrar medicamento
+
+</option>
+
+<option>
+
+Error en recordatorios
+
+</option>
+
+<option>
+
+Problema con las notificaciones
+
+</option>
+
+<option>
+
+Error al cargar información
+
+</option>
+
+<option>
+
+Aplicación lenta
+
+</option>
+
+<option>
+
+Otro
+
+</option>
+
+</select>
+
+</div>
+
+<!-- Prioridad -->
+
+<div class="grupo">
+
+<label>
+
+Prioridad
+
+</label>
+
+<div class="prioridad">
+
+<label>
+
+<input
+
+type="radio"
+
+name="prioridad"
+
+value="Alta">
+
+🔴 Alta
+
+</label>
+
+<label>
+
+<input
+
+type="radio"
+
+name="prioridad"
+
+value="Media">
+
+🟡 Media
+
+</label>
+
+<label>
+
+<input
+
+type="radio"
+
+name="prioridad"
+
+value="Baja">
+
+🟢 Baja
+
+</label>
+
+</div>
+
+</div>
+
+<!-- Descripción -->
+
+<div class="grupo">
+
+<label>
+
+Descripción del problema
+
+</label>
+
+<textarea
+
+id="descripcion"
+
+rows="7"
+
+maxlength="700"
+
+placeholder="Describe aquí el inconveniente..."
+
+required>
+
+</textarea>
+
+<div class="contador">
+
+<span id="contador">
+
+0
+
+</span>
+
+/ 700 caracteres
+
+</div>
+
+</div>
+
+<!-- Archivo -->
+
+<div class="grupo">
+
+<label>
+
+Adjuntar evidencia (Opcional)
+
+</label>
+
+<input
+
+type="file"
+
+id="archivo"
+
+accept="image/*">
+
+</div>
+
+<!-- INFORMACIÓN DEL SISTEMA -->
+
+<div class="informacion">
+
+<h3>
+
+Información del sistema
+
+</h3>
+
+<div class="dato">
+
+<span>Versión MiDosis</span>
+
+<strong>1.0.0</strong>
+
+</div>
+
+<div class="dato">
+
+<span>Sistema Operativo</span>
+
+<strong>Android 14</strong>
+
+</div>
+
+<div class="dato">
+
+<span>Fecha</span>
+
+<strong id="fechaActual"></strong>
+
+</div>
+
+</div>
+
+<!-- BOTONES -->
+
+<div class="botones">
+
+<button
+
+type="submit"
+
+class="btnEnviar">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+Enviar reporte
+
+</button>
+
+<a
+
+href="soporte.html"
+
+class="btnCancelar">
+
+Cancelar
+
+</a>
+
+</div>
+
+</form>
+
+</section>
+
+<!--==========================
+        RECOMENDACIONES
+===========================-->
+
+<section class="recomendaciones">
+
+<h3>
+
+<i class="fa-solid fa-circle-info"></i>
+
+Recomendaciones
+
+</h3>
+
+<ul>
+
+<li>Describe el problema paso a paso.</li>
+
+<li>Indica cuándo ocurrió.</li>
+
+<li>Adjunta una captura de pantalla si es posible.</li>
+
+<li>Menciona qué estabas haciendo antes del error.</li>
+
+</ul>
+
+</section>
+
+</div>
+
+<!--==========================
+      BARRA INFERIOR
+===========================-->
+
+<nav class="bottom">
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>Inicio</span>
+
+</a>
+
+<a href="medicamentos.html">
+
+<i class="fa-solid fa-capsules"></i>
+
+<span>Medicamentos</span>
+
+</a>
+
+<a href="historial.html">
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+<span>Historial</span>
+
+</a>
+
+<a href="perfil.html">
+
+<i class="fa-solid fa-user"></i>
+
+<span>Perfil</span>
+
+</a>
+
+</nav>
+
+<script src="reportar-problema.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,791 @@
+/*=================================================
+                VARIABLES
+=================================================*/
+
+:root{
+
+    --azul:#1E63D6;
+    --azulOscuro:#154AA5;
+    --azulClaro:#EAF3FF;
+
+    --verde:#31C24C;
+    --rojo:#E53935;
+
+    --gris:#F5F7FB;
+    --grisBorde:#DCDCDC;
+    --grisTexto:#666666;
+
+    --blanco:#FFFFFF;
+
+    --radio:18px;
+
+    --sombra:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+/*=================================================
+            CONFIGURACIÓN GENERAL
+=================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+body{
+
+    background:var(--gris);
+
+    display:flex;
+
+    justify-content:center;
+
+    min-height:100vh;
+
+}
+
+/*=================================================
+            CONTENEDOR
+=================================================*/
+
+.contenedor{
+
+    width:100%;
+    max-width:430px;
+
+    min-height:100vh;
+
+    background:var(--blanco);
+
+    box-shadow:var(--sombra);
+
+    padding-bottom:40px;
+
+}
+
+/*=================================================
+                HEADER
+=================================================*/
+
+header{
+
+    background:linear-gradient(
+        135deg,
+        var(--azul),
+        var(--azulOscuro)
+    );
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    padding:18px;
+
+}
+
+header h2{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.volver{
+
+    position:absolute;
+
+    left:20px;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    transition:.30s;
+
+}
+
+.volver:hover{
+
+    transform:translateX(-4px);
+
+}
+
+/*=================================================
+                LOGO
+=================================================*/
+
+.logo{
+
+    text-align:center;
+
+    padding:28px 20px;
+
+}
+
+.logo img{
+
+    width:90px;
+
+    margin-bottom:15px;
+
+}
+
+.logo h3{
+
+    font-size:24px;
+
+    color:#222;
+
+    margin-bottom:10px;
+
+}
+
+.logo p{
+
+    color:var(--grisTexto);
+
+    line-height:24px;
+
+}
+
+/*=================================================
+            TARJETAS
+=================================================*/
+
+.tarjeta{
+
+    background:white;
+
+    margin:18px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.tarjeta h4{
+
+    color:var(--azul);
+
+    margin-bottom:18px;
+
+    font-size:18px;
+
+}
+
+/*=================================================
+            OPCIONES
+=================================================*/
+
+.item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    text-decoration:none;
+
+    color:#333;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #EEEEEE;
+
+    transition:.30s;
+
+}
+
+.item:last-child{
+
+    border-bottom:none;
+
+}
+
+.item:hover{
+
+    transform:translateX(5px);
+
+}
+
+.item div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.item div i{
+
+    width:38px;
+
+    height:38px;
+
+    background:var(--azulClaro);
+
+    color:var(--azul);
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.item .fa-chevron-right{
+
+    color:#999;
+
+}
+
+/*=================================================
+            SWITCH
+=================================================*/
+
+.switch{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:18px 0;
+
+}
+
+.switch span{
+
+    font-size:15px;
+
+    color:#333;
+
+}
+
+/*=================================================
+            INTERRUPTOR
+=================================================*/
+
+.interruptor{
+
+    position:relative;
+
+    display:inline-block;
+
+    width:55px;
+
+    height:28px;
+
+}
+
+.interruptor input{
+
+    opacity:0;
+
+    width:0;
+
+    height:0;
+
+}
+
+.slider{
+
+    position:absolute;
+
+    cursor:pointer;
+
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+
+    background:#CCCCCC;
+
+    transition:.4s;
+
+    border-radius:30px;
+
+}
+
+.slider:before{
+
+    position:absolute;
+
+    content:"";
+
+    width:22px;
+
+    height:22px;
+
+    left:3px;
+
+    bottom:3px;
+
+    background:white;
+
+    transition:.4s;
+
+    border-radius:50%;
+
+}
+
+input:checked + .slider{
+
+    background:var(--verde);
+
+}
+
+input:checked + .slider:before{
+
+    transform:translateX(27px);
+
+}
+
+/*=================================================
+            SELECT
+=================================================*/
+
+select{
+
+    width:100%;
+
+    margin-top:10px;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid var(--grisBorde);
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.30s;
+
+}
+
+select:focus{
+
+    border-color:var(--azul);
+
+    box-shadow:0 0 8px rgba(30,99,214,.20);
+
+}
+
+/*=================================================
+            VERSIÓN
+=================================================*/
+
+.version{
+
+    text-align:center;
+
+    margin-top:20px;
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+/*=================================================
+                BOTONES
+=================================================*/
+
+.botones{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin:30px 18px;
+
+}
+
+.guardar{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:linear-gradient(
+        135deg,
+        var(--azul),
+        var(--azulOscuro)
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.guardar:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 10px 20px rgba(30,99,214,.25);
+
+}
+
+.guardar:active{
+
+    transform:scale(.98);
+
+}
+
+.cerrar{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#E53935;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+}
+
+.cerrar:hover{
+
+    background:#C62828;
+
+    transform:translateY(-2px);
+
+}
+
+.cerrar:active{
+
+    transform:scale(.98);
+
+}
+
+/*=================================================
+            EFECTOS
+=================================================*/
+
+.item:hover{
+
+    background:#F8FBFF;
+
+    border-radius:12px;
+
+    padding-left:10px;
+
+}
+
+.item:active{
+
+    transform:scale(.98);
+
+}
+
+select:hover{
+
+    border-color:var(--azul);
+
+}
+
+.switch:hover{
+
+    background:#F8FBFF;
+
+    border-radius:12px;
+
+    padding:8px;
+
+    transition:.30s;
+
+}
+
+/*=================================================
+            MODO OSCURO
+=================================================*/
+
+body.dark{
+
+    background:#1F2937;
+
+}
+
+body.dark .contenedor{
+
+    background:#2C3E50;
+
+    color:white;
+
+}
+
+body.dark .tarjeta{
+
+    background:#34495E;
+
+}
+
+body.dark .item{
+
+    color:white;
+
+    border-color:#4A6572;
+
+}
+
+body.dark .item div i{
+
+    background:#496B93;
+
+    color:white;
+
+}
+
+body.dark select{
+
+    background:#455A64;
+
+    color:white;
+
+    border-color:#607D8B;
+
+}
+
+body.dark .switch span{
+
+    color:white;
+
+}
+
+body.dark .logo h3{
+
+    color:white;
+
+}
+
+body.dark .logo p{
+
+    color:#DDDDDD;
+
+}
+
+body.dark .version{
+
+    color:#CCCCCC;
+
+}
+
+/*=================================================
+            ANIMACIONES
+=================================================*/
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.logo{
+
+    animation:aparecer .5s ease;
+
+}
+
+.tarjeta{
+
+    animation:aparecer .8s ease;
+
+}
+
+.botones{
+
+    animation:aparecer 1s ease;
+
+}
+
+/*=================================================
+            RESPONSIVE
+=================================================*/
+
+@media(max-width:430px){
+
+    .contenedor{
+
+        width:100%;
+
+    }
+
+    header{
+
+        padding:16px;
+
+    }
+
+    header h2{
+
+        font-size:20px;
+
+    }
+
+    .logo img{
+
+        width:80px;
+
+    }
+
+    .logo h3{
+
+        font-size:22px;
+
+    }
+
+    .logo p{
+
+        font-size:14px;
+
+    }
+
+    .tarjeta{
+
+        margin:15px;
+
+        padding:15px;
+
+    }
+
+}
+
+@media(min-width:900px){
+
+    body{
+
+        background:#EAF0F8;
+
+    }
+
+    .contenedor{
+
+        margin:30px auto;
+
+        border-radius:25px;
+
+        overflow:hidden;
+
+    }
+
+}
+
+/*=================================================
+            TRANSICIONES
+=================================================*/
+
+button,
+select,
+.item,
+.slider,
+a{
+
+    transition:.30s;
+
+}
+
+/*=================================================
+            SCROLL
+=================================================*/
+
+::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#C8C8C8;
+
+    border-radius:20px;
+
+}
+
+/*=================================================
+            MENSAJES
+=================================================*/
+
+.exito{
+
+    color:#31C24C;
+
+    font-weight:600;
+
+}
+
+.error{
+
+    color:#E53935;
+
+    font-weight:600;
+
+}
+
+/*=================================================
+            FIN DEL CSS
+=================================================*/
